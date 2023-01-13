@@ -11,7 +11,39 @@
     },
     "hero": {
       "templates": ["baseActor"],
-      "ammunition": 0
+      "ammunition": 0,
+      "attrs": {
+        "agr": {
+          "max": 0,
+          "curr": 0
+        },
+        "agi": {
+          "max": 0,
+          "curr": 0
+        },
+        "int": {
+          "max": 0,
+          "curr": 0
+        }, 
+        "srv": {
+          "max": 0,
+          "curr": 0
+        },
+        "brains": 0
+      },
+      "equips": [],
+      "injuries": [],
+      "skills": [],
+      "supervisor": "",
+      "code": "",
+      "hordes": {
+        "hp": 3,
+        "dmg": 1,
+        "size": {
+          "max": 0,
+          "curr": 0
+        }
+      }
     },
     "enemy": {
       "templates": ["baseActor"],

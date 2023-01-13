@@ -15,3 +15,10 @@ Necrobiozz.Distance = {
 Necrobiozz.Enemies = {
 
 }
+
+Necrobiozz.Skills = {
+  "Common": ["fastheal", "masspl", "regen", "fastinf", "necrospore", "puthand", "flair", "infyey", "selfsom", "deadface", "nohangry"],
+  "Agresses": ["str", "gromila", "arm", "kogti", "blades", "argghh", "electric", "emizom"],
+  "Agilities": ["hvat", "oplet", "acidplui", "acidblood", "acidslun", "fastzomb", "prigun", "stenolaz", "gracia", "eska"],
+  "Intelegent": ["openself", "upyp", "engeneer", "iunder", "write", "ispeek", "listen", "leader", "kuklo", "vudlo", "iron", "horde", "itsbrains", "nasled", "brain", "beiblya", "piu", "oekr", "necrosaper"]
+}

@@ -9,12 +9,12 @@ import { registerSettings } from "./settings.js";
 
 async function preloadHandlebarsTemplates(){
   const templatePath = [
-      "systems/FVTT10_Necrobiozz/templates/item-sheet.html",
-      "systems/FVTT10_Necrobiozz/templates/item-armor-sheet.html",
-      "systems/FVTT10_Necrobiozz/templates/item-equipment-sheet.html",
-      "systems/FVTT10_Necrobiozz/templates/item-weapon-sheet.html",
-      "systems/FVTT10_Necrobiozz/templates/actor-hero-sheet.html",
-      "systems/FVTT10_Necrobiozz/templates/actor-enemy-sheet.html"
+      "systems/FVTT10_Necrobiozz/templates/item-sheet.hbs",
+      "systems/FVTT10_Necrobiozz/templates/item-armor-sheet.hbs",
+      "systems/FVTT10_Necrobiozz/templates/item-equipment-sheet.hbs",
+      "systems/FVTT10_Necrobiozz/templates/item-weapon-sheet.hbs",
+      "systems/FVTT10_Necrobiozz/templates/actor-hero-sheet.hbs",
+      "systems/FVTT10_Necrobiozz/templates/actor-enemy-sheet.hbs"
   ];
   return loadTemplates(templatePath); 
 }

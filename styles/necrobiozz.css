@@ -13,3 +13,9 @@
 .editor {
   height: 200px;
 }
+
+table {
+  margin: 0;
+  border: 0;
+  flex: 0;
+}
