@@ -1,0 +1,52 @@
+{
+  "Actor": {
+    "types": [
+      "hero",
+      "enemy"
+    ],
+    "templates": {
+      "baseActor": {
+        "description": ""
+      }
+    },
+    "hero": {
+      "templates": ["baseActor"],
+      "ammunition": 0
+    },
+    "enemy": {
+      "templates": ["baseActor"],
+      "strength": 0
+    }
+  },
+  "Item": {
+    "types": [
+      "weapon",
+      "armor",
+      "equipment"
+    ],
+    "templates":{
+      "base": {
+        "description": ""
+      }
+    },
+    "weapon": {
+      "templates": ["base"],
+      "diceDamage": "",
+      "distance": "all",
+      "props": {
+        "isTraumatic": false,
+        "valTraumatic": 0,
+        "isSingleShot": false,
+        "isSilent": false,
+        "isRecharge": false
+      }
+    },
+    "armor": {
+      "templates": ["base"],
+      "survivability": 0
+    },
+    "equipment": {
+      "templates": ["base"]
+    }
+  }
+}

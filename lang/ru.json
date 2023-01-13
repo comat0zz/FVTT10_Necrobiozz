@@ -1,0 +1,42 @@
+{
+	"nkrbz": {
+		"Common": {
+			"Description": "Описание",
+			"Select": {
+				"Yes": "Да",
+				"No": "Нет"
+			}
+		},
+		
+		"Actor": {
+
+		},
+
+		"Item": {
+			"InputName": "Введите название",
+			"Properties": "Свойства",
+
+			"Weapon": {
+				"isTraumatic": "Травмирующее",
+				"valTraumatic": "Количество урона",
+				"isSingleShot": "Однозарядное",
+				"isSilent": "Бесшумное",
+
+				"isRecharge": "Требуется перезарядка",
+				"Distance": "Дистанция",
+				"DistanceVal": {
+					"All": "Любая",
+					"Beside": "Близко",
+					"Short": "Рядом",
+					"Long": "В отдалении"
+				},
+				"Damage": "Урон (например, 1d8)"
+			},
+
+			"Armor": {
+				"Survivability": "Добавляет живучесть?",
+				"SurvVal": "и сколько"
+			}
+		}
+	}
+}
