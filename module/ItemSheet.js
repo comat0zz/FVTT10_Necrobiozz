@@ -29,13 +29,4 @@ export default class NecrobiozzItemSheet extends ItemSheet {
     console.log(context)
     return context;
   }
-
-  /** @inheritdoc */
-  /* activateListeners(html) {
-    super.activateListeners(html);
-
-    // Everything below here is only needed if the sheet is editable
-    if ( !this.isEditable ) return;
-
-  } */
 }

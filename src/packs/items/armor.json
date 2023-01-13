@@ -1,0 +1,46 @@
+[
+	{
+		"name": "Бронежилет охранника",
+		"type": "armor",
+		"img": "systems/FVTT10_Necrobiozz/assets/armor/heart-armor.png",
+		"folder": null,
+		"data": {
+			"description": "",
+			"survVal": 1,
+			"isSurval": true
+		 }		
+	},
+	{
+		"name": "Армейский бронежилет",
+		"type": "armor",
+		"img": "systems/FVTT10_Necrobiozz/assets/armor/kevlar-vest.png",
+		"folder": null,
+		"data": {
+			"description": "Oдин раз защищает от травмы “Массированные повреждения”.",
+			"survVal": 2,
+			"isSurval": true
+		 }		
+	},
+	{
+		"name": "Каска",
+		"type": "armor",
+		"img": "systems/FVTT10_Necrobiozz/assets/armor/robot-helmet.png",
+		"folder": null,
+		"data": {
+			"description": "Защищает от травмы 'Хэдшот', но только один раз.",
+			"survVal": 0,
+			"isSurval": false
+		 }		
+	},
+	{
+		"name": "Противоукусный костюм",
+		"type": "armor",
+		"img": "systems/FVTT10_Necrobiozz/assets/armor/moncler-jacket.png",
+		"folder": null,
+		"data": {
+			"description": "В случае базовой безоружной атаки зомби заражение не происходит.",
+			"survVal": 0,
+			"isSurval": false
+		 }		
+	}
+]

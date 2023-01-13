@@ -25,6 +25,15 @@
   "styles": [
     "styles/necrobiozz.css"
   ],
+  "packs": [
+    {
+      "name": "items",
+      "label": "Предметы",
+      "system": "FVTT10_Necrobiozz",
+      "path": "packs/items.db",
+      "type": "Item"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
