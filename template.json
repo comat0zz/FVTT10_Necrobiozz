@@ -43,7 +43,8 @@
     },
     "armor": {
       "templates": ["base"],
-      "survivability": 0
+      "survVal": 0,
+      "isSurval": false
     },
     "equipment": {
       "templates": ["base"]
