@@ -16,3 +16,9 @@
   <img src="{{injury.img}}">{{injury.system.description}}
 </p>
 {{/if}}
+
+{{#if isAmmo}}
+  {{#ifgt total 3}}
+  <div class="chat-roll-weapon-alert">{{localize "nkrbz.Item.Weapon.isRecharge"}}</div>
+  {{/ifgt}}
+{{/if}}

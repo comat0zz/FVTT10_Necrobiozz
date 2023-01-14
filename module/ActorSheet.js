@@ -86,7 +86,8 @@ export default class NecrobiozzActorSheet extends ActorSheet {
       result: roll.result,
       total: roll.total,
       isInjury: isInjury,
-      injury: injury
+      injury: injury,
+      isAmmo: oItem.system.props.isAmmo // TODO: Сделать проверку патронов
     });
 
     ChatMessage.create({
@@ -145,8 +146,6 @@ export default class NecrobiozzActorSheet extends ActorSheet {
       newItem.survVal = item.system.survVal;
       newItem.isSurval = item.system.isSurval;
     }
-    console.log(newItem)
-
     equips.push(newItem);
     this.actor.update({"data.equips": equips});
   }

@@ -140,7 +140,8 @@
         "valTraumatic": 0,
         "isSingleShot": false,
         "isSilent": false,
-        "isRecharge": false
+        "isRecharge": false,
+        "isAmmo": false
       }
     },
     "armor": {
