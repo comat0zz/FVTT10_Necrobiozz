@@ -1,0 +1,18 @@
+<h2>{{item_name}}</h2>
+<p class="chat-roll-weapon-info">
+  <img src="{{img}}">{{desc}}
+</p>
+<b>{{localize "nkrbz.Item.Weapon.Distance"}}:&nbsp;</b>{{localize distance}}<br><br>
+<div class="chat-roll-weapon-msg">{{localize "nkrbz.Actor.toDamage"}}</div>
+<div class="chat-roll-weapon-damage">{{total}}</div>
+
+<div class="chat-roll-weapon-msg">{{localize "nkrbz.Actor.isThreshold"}}</div>
+<div class="chat-roll-weapon-threshold">{{threshold}}</div>
+
+{{#if isInjury}}
+<div class="chat-roll-weapon-msg">{{localize "nkrbz.Actor.injuryTo"}}</div>
+<p class="chat-roll-weapon-info">
+  <b>{{injury.name}}</b>
+  <img src="{{injury.img}}">{{injury.system.description}}
+</p>
+{{/if}}

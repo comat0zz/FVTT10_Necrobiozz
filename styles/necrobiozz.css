@@ -99,7 +99,7 @@ ul li {
   width: 25px;
 }
 
-.cgrab {
+.cgrab, .equip-item-del, .actor-roll-weapon {
   cursor: grab;
 }
 .actor-item-equip img{
@@ -111,12 +111,9 @@ h3 {
   margin-bottom: 0;
 }
 
-
-
 .actor-skills input[type=checkbox] {
   margin: 0
 }
-
 
 .weaponequip .actor-column {
   padding: 0px 5px 0px 5px;
@@ -131,4 +128,29 @@ input[name="data.ammunition"] {
   width: 50px;
   margin-left: 5px;
   margin-bottom: 5px;
+}
+
+.chat-roll-weapon .actor-column {
+  flex: 0 0 auto;
+  width: 30%;
+}
+
+.chat-roll-weapon-info img{
+  width: 40px;
+  margin: 3px 3px 3px 0;
+  float: left;
+}
+
+.chat-roll-weapon-msg, .chat-roll-weapon-damage, .chat-roll-weapon-threshold{
+  text-align: center;
+}
+
+.chat-roll-weapon-damage {
+  font-weight: bold;
+  font-size:xx-large;
+}
+
+.chat-roll-weapon-threshold {
+  font-weight: bold;
+  font-size:large;
 }

@@ -42,15 +42,58 @@ export default class NecrobiozzActorSheet extends ActorSheet {
 
     html.find('.actor-roll-weapon').click(evt => this._onActorRollWeapon(evt));
     html.find('.actor-roll-attrs').click(evt => this._onActorRollAttrs(evt));
-    html.find('.actor-roll-hand').click(evt => this._onActorRollHand(evt));
 
     html.find('.equip-item-del').click(evt => this._onEquipItemDel(evt));
   }
 
-  _onActorRollWeapon(evt) {
-    evt.preventDefault();
-    const weapon_id = $(evt.currentTarget).closest('tr').attr('item-id'); 
+  getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+  }
 
+  async _onActorRollWeapon(evt) {
+    evt.preventDefault();
+    const weapon_id = $(evt.currentTarget).closest('tr').attr('item-id');
+    const item = this.actor.system.equips.filter((i) => i.type === "weapon" && i.id == weapon_id);
+    const oItem = game.items.get(item[0].item_id);
+    
+    // Порог травмы, по умолчанию 1
+    let threshold = 1;
+
+    if(oItem.system.props.isTraumatic) {
+      threshold = oItem.system.props.valTraumatic;
+    }
+
+    let roll = await new Roll(item[0].damage).roll({async: true});
+    
+    let isInjury = false;
+    let injury = {};
+    if(roll.total >= threshold) {
+      isInjury = true;
+      const injuries = game.items.filter((i) => i.type === "injuries");
+      const lenInj = injuries.length - 1;
+      injury = injuries[this.getRandomInt(0,lenInj)];
+    }
+
+    const html = await renderTemplate("systems/FVTT10_Necrobiozz/templates/chat-weapon-roll.hbs", {
+      item_name: item[0].name,
+      img: item[0].img,
+      dice: item[0].damage,
+      distance: CONFIG.Necrobiozz.Distance[oItem.system.distance],
+      desc: oItem.system.description,
+      threshold: threshold,
+      result: roll.result,
+      total: roll.total,
+      isInjury: isInjury,
+      injury: injury
+    });
+
+    ChatMessage.create({
+      user: game.user._id,
+      speaker: ChatMessage.getSpeaker(),
+      content: html
+    });
   }
 
   _onActorRollAttrs(evt) {
@@ -59,11 +102,7 @@ export default class NecrobiozzActorSheet extends ActorSheet {
     console.log(attrType);
     console.log(this.actor.system.attrs[attrType].curr)
 
-  }
-
-  _onActorRollHand(evt) {
-    evt.preventDefault();
-    
+    //let roll = new Roll(`1d20${skillData.total}`).roll({async: true});
 
   }
 
