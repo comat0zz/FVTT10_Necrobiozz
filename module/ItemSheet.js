@@ -16,7 +16,7 @@ export default class NecrobiozzItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    return `systems/FVTT10_Necrobiozz/templates/item-${this.item.type}-sheet.hbs`;
+    return `systems/necrobiozz/templates/item-${this.item.type}-sheet.hbs`;
   }
 
   /** @inheritdoc */

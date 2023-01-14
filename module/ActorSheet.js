@@ -18,7 +18,7 @@ export default class NecrobiozzActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/FVTT10_Necrobiozz/templates/actor-${this.actor.type}-sheet.hbs`;
+    return `systems/necrobiozz/templates/actor-${this.actor.type}-sheet.hbs`;
   }
 
   /** @inheritdoc */
@@ -76,7 +76,7 @@ export default class NecrobiozzActorSheet extends ActorSheet {
       injury = injuries[this.getRandomInt(0,lenInj)];
     }
 
-    const html = await renderTemplate("systems/FVTT10_Necrobiozz/templates/chat-weapon-roll.hbs", {
+    const html = await renderTemplate("systems/necrobiozz/templates/chat-weapon-roll.hbs", {
       item_name: item[0].name,
       img: item[0].img,
       dice: item[0].damage,
@@ -109,7 +109,7 @@ export default class NecrobiozzActorSheet extends ActorSheet {
     let sortedResults = roll.terms[0].results.map(r => {return r.result}).sort(function(a, b) {
       return b - a;});
     
-      const tpl = await renderTemplate("systems/FVTT10_Necrobiozz/templates/chat-attrs-roll.hbs", {
+      const tpl = await renderTemplate("systems/necrobiozz/templates/chat-attrs-roll.hbs", {
         terms: `${dices}d20`,
         row: sortedResults.join(', '),
         rmax: parseInt(sortedResults[0]),
@@ -132,7 +132,7 @@ export default class NecrobiozzActorSheet extends ActorSheet {
     evt.preventDefault();
     const attrType = $(evt.currentTarget).attr('attr-type'); 
 
-    const template = await renderTemplate("systems/FVTT10_Necrobiozz/templates/dialog-attrs-roll.hbs");
+    const template = await renderTemplate("systems/necrobiozz/templates/dialog-attrs-roll.hbs");
     return new Promise(resolve => {
       const data = {
         title: game.i18n.localize("nkrbz.Common.CheckAttrs"),

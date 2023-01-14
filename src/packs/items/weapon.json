@@ -2,7 +2,7 @@
 	{
 		"name": "Импровизированное оружие",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/sword-spade.png",
+		"img": "systems/necrobiozz/assets/weapon/sword-spade.png",
 		"folder": null,
 		"data": {
 			"description": "В импровизированное оружие входят все предметы, которые можно держать одной или двумя руками, такие как разбитая бутылка, ножка от стола, сковорода, колесо от телеги, или мёртвый гоблин. Во многих случаях импровизированное оружие подобно настоящему оружию, и потому может использоваться как оно.",
@@ -20,7 +20,7 @@
 	{
 		"name": "Электрошокер",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/electrical-crescent.png",
+		"img": "systems/necrobiozz/assets/weapon/electrical-crescent.png",
 		"folder": null,
 		"data": {
 			"description": "Если выпало 4 — жертва пропускает свой следующий ход.",
@@ -38,7 +38,7 @@
 	{
 		"name": "Шест с петлёй",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/cloud-ring.png",
+		"img": "systems/necrobiozz/assets/weapon/cloud-ring.png",
 		"folder": null,
 		"data": {
 			"description": "Вместо атаки совершите проверку проворства, чтобы набросить петлю.<br>При успехе противник получает осложнение на все проверки и должен оставаться на дистанции близко от вас.<br>Чтобы освободиться, пройдите проверку агрессивности.",
@@ -56,7 +56,7 @@
 	{
 		"name": "Дубина",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/baton.png",
+		"img": "systems/necrobiozz/assets/weapon/baton.png",
 		"folder": null,
 		"data": {
 			"description": "Па́лица, или дубинка, дубина, ослоп, ослопина, дрючок — холодное оружие ударно-раздробляющего действия, происходящее от обычной деревянной палки.",
@@ -74,7 +74,7 @@
 	{
 		"name": "Топор",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/magic-axe.png",
+		"img": "systems/necrobiozz/assets/weapon/magic-axe.png",
 		"folder": null,
 		"data": {
 			"description": "Рубящее орудие, чаще короткое древковое и имеющее рабочее лезвие, расположенное вдоль рукоятки.",
@@ -92,7 +92,7 @@
 	{
 		"name": "Мачете",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/machete.png",
+		"img": "systems/necrobiozz/assets/weapon/machete.png",
 		"folder": null,
 		"data": {
 			"description": "Длинный (часто более 50 см), обычно тонкий (до 3 мм) и широкий нож",
@@ -110,7 +110,7 @@
 	{
 		"name": "Дубинка с шипами ",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/wood-club.png",
+		"img": "systems/necrobiozz/assets/weapon/wood-club.png",
 		"folder": null,
 		"data": {
 			"description": "Холодное оружие ударно-раздробляющего действия, происходящее от обычной деревянной палки.",
@@ -128,7 +128,7 @@
 	{
 		"name": "Пистолет",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/pistol-gun.png",
+		"img": "systems/necrobiozz/assets/weapon/pistol-gun.png",
 		"folder": null,
 		"data": {
 			"description": "Ручное короткоствольное стрелковое оружие, предназначенное для поражения целей (живой силы и других) на дальности до 25-50 метров.",
@@ -146,7 +146,7 @@
 	{
 		"name": "Пистолет-пулемёт",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/uzi.png",
+		"img": "systems/necrobiozz/assets/weapon/uzi.png",
 		"folder": null,
 		"data": {
 			"description": "Индивидуальное ручное автоматическое стрелковое оружие непрерывного огня, использующее для стрельбы пистолетный патрон.",
@@ -164,7 +164,7 @@
 	{
 		"name": "Автомат",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/ak47.png",
+		"img": "systems/necrobiozz/assets/weapon/ak47.png",
 		"folder": null,
 		"data": {
 			"description": "Ручное индивидуальное автоматическое огнестрельное стрелковое оружие, предназначенное для поражения живой силы противника в ближнем бою и способное создавать высокую плотность огня.",
@@ -182,7 +182,7 @@
 	{
 		"name": "Дробовик",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/sawed-off-shotgun.png",
+		"img": "systems/necrobiozz/assets/weapon/sawed-off-shotgun.png",
 		"folder": null,
 		"data": {
 			"description": "Дробовик или ружьё гладкоствольное — оружие, как правило, предназначенное для стрельбы с плеча.",
@@ -200,7 +200,7 @@
 	{
 		"name": "Пулемёт",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/machine-gun.png",
+		"img": "systems/necrobiozz/assets/weapon/machine-gun.png",
 		"folder": null,
 		"data": {
 			"description": "Пулемёт — групповое либо индивидуальное стрелковое автоматическое оружие поддержки, предназначенное для поражения пулями различных наземных, надводных и воздушных целей.",
@@ -218,7 +218,7 @@
 	{
 		"name": "Огнемёт",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/fire-ray.png",
+		"img": "systems/necrobiozz/assets/weapon/fire-ray.png",
 		"folder": null,
 		"data": {
 			"description": "Урон в пределах дистанции Рядом. Следующие 5 раундов наносит d6 урона огнём.",
@@ -236,7 +236,7 @@
 	{
 		"name": "Самодельный арбалет",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/crossbow.png",
+		"img": "systems/necrobiozz/assets/weapon/crossbow.png",
 		"folder": null,
 		"data": {
 			"description": "Чаще всего самодельные арбалеты делают из луков, либо рессороподобных стальных пластин с блоками. В качестве тетивы «Кулибин» использует металлический трос. Стреляют такие громоздкие штуки плохо, весят много, попадают криво. Ложе самодельно арбалета может быть как стальным, так и из дерева.",
@@ -254,7 +254,7 @@
 	{
 		"name": "Самопал",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/explosive-meeting.png",
+		"img": "systems/necrobiozz/assets/weapon/explosive-meeting.png",
 		"folder": null,
 		"data": {
 			"description": "Неэффективно на дистанции <b>В отдалении</b>.",
@@ -272,7 +272,7 @@
 	{
 		"name": "Пластиковая взрывчатка",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/time-dynamite.png",
+		"img": "systems/necrobiozz/assets/weapon/time-dynamite.png",
 		"folder": null,
 		"data": {
 			"description": "Пласти́чные взры́вчатые вещества́ — взрывчатые вещества (ВВ) и смеси, обладающие пластичностью. Пластичная взрывчатка обычно дороже традиционной.",
@@ -290,7 +290,7 @@
 	{
 		"name": "Коктейль молотова",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/molotov.png",
+		"img": "systems/necrobiozz/assets/weapon/molotov.png",
 		"folder": null,
 		"data": {
 			"description": "Бутылка с зажигательной смесью — общее название простейших жидкостных зажигательных гранат. Обычная конструкция — стеклянная бутылка, содержащая горючую жидкость, и запал.",
@@ -308,7 +308,7 @@
 	{
 		"name": "Граната",
 		"type": "weapon",
-		"img": "systems/FVTT10_Necrobiozz/assets/weapon/grenade.png",
+		"img": "systems/necrobiozz/assets/weapon/grenade.png",
 		"folder": null,
 		"data": {
 			"description": "Наносит урон всем в пределах дистанции Близко.",

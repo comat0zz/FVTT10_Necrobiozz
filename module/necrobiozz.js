@@ -9,16 +9,16 @@ import { registerSettings } from "./settings.js";
 
 async function preloadHandlebarsTemplates(){
   const templatePath = [
-      "systems/FVTT10_Necrobiozz/templates/item-sheet.hbs",
-      "systems/FVTT10_Necrobiozz/templates/item-injuries-sheet.hbs",
-      "systems/FVTT10_Necrobiozz/templates/item-armor-sheet.hbs",
-      "systems/FVTT10_Necrobiozz/templates/item-equipment-sheet.hbs",
-      "systems/FVTT10_Necrobiozz/templates/item-weapon-sheet.hbs",
-      "systems/FVTT10_Necrobiozz/templates/actor-hero-sheet.hbs",
-      "systems/FVTT10_Necrobiozz/templates/actor-enemy-sheet.hbs",
-      "systems/FVTT10_Necrobiozz/templates/chat-weapon-roll.hbs",
-      "systems/FVTT10_Necrobiozz/templates/dialog-attrs-roll.hbs",
-      "systems/FVTT10_Necrobiozz/templates/chat-attrs-roll.hbs"      
+      "systems/necrobiozz/templates/item-sheet.hbs",
+      "systems/necrobiozz/templates/item-injuries-sheet.hbs",
+      "systems/necrobiozz/templates/item-armor-sheet.hbs",
+      "systems/necrobiozz/templates/item-equipment-sheet.hbs",
+      "systems/necrobiozz/templates/item-weapon-sheet.hbs",
+      "systems/necrobiozz/templates/actor-hero-sheet.hbs",
+      "systems/necrobiozz/templates/actor-enemy-sheet.hbs",
+      "systems/necrobiozz/templates/chat-weapon-roll.hbs",
+      "systems/necrobiozz/templates/dialog-attrs-roll.hbs",
+      "systems/necrobiozz/templates/chat-attrs-roll.hbs"      
   ];
   return loadTemplates(templatePath); 
 }

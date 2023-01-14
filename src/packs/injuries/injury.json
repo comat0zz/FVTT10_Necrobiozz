@@ -2,7 +2,7 @@
 	{
 		"name": "Множественные повреждения",
 		"type": "injuries",
-		"img": "systems/FVTT10_Necrobiozz/assets/injuries/anatomy.png",
+		"img": "systems/necrobiozz/assets/injuries/anatomy.png",
 		"folder": null,
 		"data": {
 			"description": "На все проверки накладывается осложнение."
@@ -11,7 +11,7 @@
 	{
 		"name": "Контузия",
 		"type": "injuries",
-		"img": "systems/FVTT10_Necrobiozz/assets/injuries/calavera.png",
+		"img": "systems/necrobiozz/assets/injuries/calavera.png",
 		"folder": null,
 		"data": {
 			"description": "Урон от атаки, нанёсшей эту травму, увеличивается вдвое. Осложнение при проверках сообразительности."
@@ -20,7 +20,7 @@
 	{
 		"name": "Серьёзное ранение",
 		"type": "injuries",
-		"img": "systems/FVTT10_Necrobiozz/assets/injuries/embrassed-energy.png",
+		"img": "systems/necrobiozz/assets/injuries/embrassed-energy.png",
 		"folder": null,
 		"data": {
 			"description": "Урон наносится в самый высокий атрибут. Все проверки этого атрибута производятся с осложнением."
@@ -29,7 +29,7 @@
 	{
 		"name": "Ослеплён",
 		"type": "injuries",
-		"img": "systems/FVTT10_Necrobiozz/assets/injuries/sight-disabled.png",
+		"img": "systems/necrobiozz/assets/injuries/sight-disabled.png",
 		"folder": null,
 		"data": {
 			"description": "Невозможно ориентироваться визуально или использовать дистанционное оружие. Осложнение при взаимодействии с предметами."
@@ -38,7 +38,7 @@
 	{
 		"name": "Травма ноги",
 		"type": "injuries",
-		"img": "systems/FVTT10_Necrobiozz/assets/injuries/knee-bandage.png",
+		"img": "systems/necrobiozz/assets/injuries/knee-bandage.png",
 		"folder": null,
 		"data": {
 			"description": "Осложнение для действий, требующих быстрого перемещения или сохранения баланса. Для перемещения на базовую скорость требуется совершать Рывок. Нельзя увеличить дальность перемещения за Рывок."
@@ -47,7 +47,7 @@
 	{
 		"name": "Травма руки",
 		"type": "injuries",
-		"img": "systems/FVTT10_Necrobiozz/assets/injuries/arm-sling.png",
+		"img": "systems/necrobiozz/assets/injuries/arm-sling.png",
 		"folder": null,
 		"data": {
 			"description": "Осложнение для действий, требующих двух рук, и -1 на безоружные атаки. Может быть получена несколько раз, штраф суммируется."
