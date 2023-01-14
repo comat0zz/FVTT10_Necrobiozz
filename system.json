@@ -2,7 +2,7 @@
   "id": "FVTT10_Necrobiozz",
   "title": "TTRPG Necrobioz",
   "description": "Игра про мертвецов от студии Ex_Nihilum",
-  "version": "1.1",
+  "version": "1.2",
   "compatibility": {
     "minimum": 10,
     "verified": 10.291
@@ -42,11 +42,6 @@
   ],
   "languages": [
     {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    },
-    {
       "lang": "ru",
       "name": "Russian",
       "path": "lang/ru.json"
@@ -57,6 +52,6 @@
   "gridUnits": "m",
 
   "url": "https://github.com/comat0zz/FVTT10_Necrobiozz",
-  "manifest": "https://github.com/comat0zz/FVTT10_Necrobiozz/releases/download/1.1/system.json",
-  "download": "https://github.com/comat0zz/FVTT10_Necrobiozz/releases/download/1.1/FVTT10_Necrobiozz.zip"
+  "manifest": "https://github.com/comat0zz/FVTT10_Necrobiozz/releases/latest/download/system.json",
+  "download": "https://github.com/comat0zz/FVTT10_Necrobiozz/releases/latest/download/FVTT10_Necrobiozz.zip"
 }
