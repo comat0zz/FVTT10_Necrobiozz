@@ -1,18 +1,25 @@
 <form class="{{cssClass}}" autocomplete="off">
 <div class='actor-wrapper'>
   <div class='actor-row'>
-    <div class='actor-column'>
-        название
+    <div class='actor-column actor-title'>
+        <ul>
+          <li>{{localize 'nkrbz.Common.Title'}}</li>
+          <li>{{localize 'nkrbz.Common.SubTitle'}}</li>
+        </ul>
     </div>
     <div class='actor-column actor-labels'>
       <ul>
-        <li>{{localize "nkrbz.Actor.Supervisor"}}</li>
-        <li>{{localize "nkrbz.Actor.Name"}}</li>
-        <li>{{localize "nkrbz.Actor.Code"}}</li>
+        <li>{{localize "nkrbz.Actor.Supervisor"}}&nbsp;</li>
+        <li>{{localize "nkrbz.Actor.Name"}}&nbsp;</li>
+        <li>{{localize "nkrbz.Actor.Code"}}&nbsp;</li>
       </ul>
     </div>
-    <div class='actor-column'>
-        как зовут и тп
+    <div class='actor-column actor-head-input'>
+        <ul>
+          <li><input name="data.supervisor" type="text" value="{{systemData.supervisor}}" placeholder="" /></li>
+          <li><input name="name" type="text" value="{{data.name}}" placeholder="" /></li>
+          <li><input name="data.code" type="text" value="{{systemData.code}}" placeholder="" /></li>
+        </ul>
     </div>
   </div>
 </div>
@@ -22,18 +29,83 @@
     <div class='actor-column'>
         <img class="actor-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
     </div>
-    <div class='actor-column'>
-        statblock
+    <div class='actor-column actor-attr-block'>
+        <h3>{{localize 'nkrbz.Actor.Attrs.Label'}}</h3>
+        <table>
+          <tr>
+              <td>{{localize "nkrbz.Actor.Attrs.Agr"}}</td>
+              <td class="actor-attrs"><input name="data.attrs.agr.curr" type="text" value="{{systemData.attrs.agr.curr}}" placeholder="" /></td>
+              <td class="actor-attrs"><input name="data.attrs.agr.max" type="text" value="{{systemData.attrs.agr.max}}" placeholder="" /></td>
+            </tr>
+            <tr>
+              <td>{{localize "nkrbz.Actor.Attrs.Agi"}}</td>
+              <td class="actor-attrs"><input name="data.attrs.agi.curr" type="text" value="{{systemData.attrs.agi.curr}}" placeholder="" /></td>
+              <td class="actor-attrs"><input name="data.attrs.agi.max" type="text" value="{{systemData.attrs.agi.max}}" placeholder="" /></td>
+            </tr>
+            <tr>
+              <td>{{localize "nkrbz.Actor.Attrs.Int"}}</td>
+              <td class="actor-attrs"><input name="data.attrs.int.curr" type="text" value="{{systemData.attrs.int.curr}}" placeholder="" /></td>
+              <td class="actor-attrs"><input name="data.attrs.int.max" type="text" value="{{systemData.attrs.int.max}}" placeholder="" /></td>
+            </tr>
+            <tr>
+              <td>{{localize "nkrbz.Actor.Attrs.srv"}}</td>
+              <td class="actor-attrs"><input name="data.attrs.srv.curr" type="text" value="{{systemData.attrs.srv.curr}}" placeholder="" /></td>
+              <td class="actor-attrs"><input name="data.attrs.srv.max" type="text" value="{{systemData.attrs.srv.max}}" placeholder="" /></td>
+            </tr>
+            <tr>
+              <td>{{localize "nkrbz.Actor.Attrs.brains"}}</td>
+              <td colspan="2"><input name="data.attrs.brains" type="text" value="{{systemData.attrs.brains}}" placeholder="" /></td>
+            </tr>
+            <tr>
+              <td colspan="2">{{localize "nkrbz.Actor.HandDmg"}}</td>
+              <td class="actor-attrs">1</td>
+            </tr>
+            <tr>
+              <td>{{localize "nkrbz.Actor.Ammo"}}</td>
+              <td colspan="2"><input name="data.ammunition" type="text" value="{{systemData.ammunition}}" placeholder="" /></td>
+            </tr>
+        </table>
     </div>
-    <div class='actor-column'>
-        hotkeys
+    <div class='actor-column actor-attr-block'>
+      <h3>{{localize "nkrbz.Actor.Injuries"}}</h3>
+      <ul class="actor-injury">
+        <li><input name="data.injuries.inj1" type="text" value="{{systemData.injuries.inj1}}" placeholder="" /></li>
+        <li><input name="data.injuries.inj2" type="text" value="{{systemData.injuries.inj2}}" placeholder="" /></li>
+        <li><input name="data.injuries.inj3" type="text" value="{{systemData.injuries.inj3}}" placeholder="" /></li>
+        <li><input name="data.injuries.inj4" type="text" value="{{systemData.injuries.inj4}}" placeholder="" /></li>
+      </ul>
+      <h3>{{localize "nkrbz.Actor.Equips"}}</h3>
+      <table>
+      {{#each data.equips as |name key|}}
+      
+      {{else}}
+      <tr><td>{{localize "nkrbz.Actor.noEquips"}}</td></tr>
+      {{/each}}
+      </table>
     </div>
   </div>
 </div>
-<h2>{{localize "nkrbz.Actor.SkillsLabel"}}</h2>
+
 <div class='actor-wrapper actor-skills'>
   <div class='actor-row'>
     <div class='actor-column'>
+      <h3>{{localize "nkrbz.Actor.HordesLabel"}}</h3>
+      <table>
+        <tr>
+          <td>{{localize "nkrbz.Actor.HordesHP"}}</td>
+          <td colspan="2"><input name="data.hordes.hp" type="text" value="{{systemData.hordes.hp}}" placeholder="" /></td>
+        </tr>
+        <tr>
+          <td>{{localize "nkrbz.Actor.HordesDmg"}}</td>
+          <td colspan="2"><input name="data.hordes.dmg" type="text" value="{{systemData.hordes.dmg}}" placeholder="" /></td>
+        </tr>
+        <tr>
+          <td>{{localize "nkrbz.Actor.HordesSize"}}</td>
+          <td class="actor-attrs"><input name="data.hordes.size.curr" type="text" value="{{systemData.hordes.size.curr}}" placeholder="" /></td>
+          <td class="actor-attrs"><input name="data.hordes.size.max" type="text" value="{{systemData.hordes.size.max}}" placeholder="" /></td>
+        </tr>
+      </table>
+
       <h3>{{localize "nkrbz.Actor.SkillCommon"}}</h3>
       <ul>
         {{#each config.Skills.Common as |name key|}}
@@ -48,8 +120,7 @@
                 <input type="checkbox" name="data.skills.Common.puthand_3" {{checked ../systemData.skills.Common.puthand_3}}/>  
               {{/ife}}
               {{lzCc "nkrbz.Actor.Skills.Common." name}}
-            </li>
-          
+            </li>          
         {{/each}}
       </ul>
     </div>

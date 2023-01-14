@@ -32,7 +32,12 @@
         "brains": 0
       },
       "equips": [],
-      "injuries": [],
+      "injuries": {
+        "inj1": "",
+        "inj2": "",
+        "inj3": "",
+        "inj4": ""
+      },
       "skills": {
         "Common": {
           "fastheal": false, 

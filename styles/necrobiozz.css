@@ -43,14 +43,41 @@ table {
   width: 90%
 }
 
-.actor-skills ul, .actor-labels ul {
+.actor-skills ul, .actor-labels ul, .actor-head-input ul, .actor-title ul, .actor-QuickAction, .actor-injury {
   padding: 0;
 }
-.actor-skills li, .actor-labels li {
+.actor-skills li, .actor-labels li, .actor-head-input li, .actor-title li, .actor-QuickAction li, .actor-injury li {
   list-style: none;
   margin-left: 0;
 }
 
 .actor-labels li {
   text-align: right;
+  line-height: 26px;
+}
+
+.actor-title li {
+  text-align: center;
+}
+
+.actor-title li:first-child {
+  font-weight: bold;
+  font-size: large;
+}
+
+.actor-title li:last-child {
+  font-weight: lighter;
+}
+
+.stblock-caption {
+  text-align: center;
+  background-color:darkgrey;
+}
+
+.actor-attr-block {
+  margin: 0 15px 0;
+}
+
+.actor-attrs {
+  width: 25px;
 }

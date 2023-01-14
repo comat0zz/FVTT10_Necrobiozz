@@ -29,4 +29,12 @@ export default class NecrobiozzActorSheet extends ActorSheet {
     return context;
   }
 
+  /** @override */
+  async _onDrop(evt) { 
+    evt.preventDefault();
+    const dragData = JSON.parse(evt.dataTransfer.getData("text/plain"));
+
+    console.log(dragData)
+  }
+
 }
