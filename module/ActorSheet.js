@@ -112,14 +112,12 @@ export default class NecrobiozzActorSheet extends ActorSheet {
       const tpl = await renderTemplate("systems/FVTT10_Necrobiozz/templates/chat-attrs-roll.hbs", {
         terms: `${dices}d20`,
         row: sortedResults.join(', '),
-        rmax: sortedResults[0],
-        rmin: sortedResults.slice(-1),
+        rmax: parseInt(sortedResults[0]),
+        rmin: parseInt(sortedResults.slice(-1)),
         attr: attr,
-        modify: mod,
-        actor: {
-          min: actor_min,
-          max: actor_max
-        },
+        mod: mod,
+        actor_min: parseInt(actor_min),
+        actor_max: parseInt(actor_max),
         attrLabel: CONFIG.Necrobiozz.Attrs[attr]
       });
   

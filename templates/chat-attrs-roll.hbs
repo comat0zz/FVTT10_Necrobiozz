@@ -1,4 +1,43 @@
 <h3>{{localize attrLabel}}</h3>
 <div>
-
+{{terms}}: {{row}}
 </div>
+<div class="chat-attrs-modify">
+  {{#ife mod "1"}}
+    {{localize "nkrbz.Common.withHindranceChat"}}<br>
+
+    {{#iflt rmax actor_min}}
+      {{localize "nkrbz.Common.attrChat"}}&nbsp;{{actor_min}} > {{rmax}}&nbsp;{{localize "nkrbz.Common.rollChat"}}<br>
+      {{localize "nkrbz.Common.checkSuccess"}}
+    {{else}}
+      {{localize "nkrbz.Common.attrChat"}}&nbsp;{{actor_min}} <= {{rmax}}&nbsp;{{localize "nkrbz.Common.rollChat"}}<br>
+      {{localize "nkrbz.Common.checkFailure"}}
+    {{/iflt}}
+
+  {{/ife}}
+  {{#ife mod "2"}}
+    {{localize "nkrbz.Common.withNormalChat"}}<br>
+    {{#iflt rmax actor_min}}
+      {{localize "nkrbz.Common.attrChat"}}&nbsp;{{actor_min}} > {{rmax}}&nbsp;{{localize "nkrbz.Common.rollChat"}}<br>
+      {{localize "nkrbz.Common.checkSuccess"}}
+    {{else}}
+      {{localize "nkrbz.Common.attrChat"}}&nbsp;{{actor_min}} <= {{rmax}}&nbsp;{{localize "nkrbz.Common.rollChat"}}<br>
+      {{localize "nkrbz.Common.checkFailure"}}
+    {{/iflt}}
+  {{/ife}}
+  {{#ife mod "3"}}
+    {{localize "nkrbz.Common.withAdvantageChat"}}<br>
+
+    {{#ifgt actor_min rmin}}
+      {{localize "nkrbz.Common.attrChat"}}&nbsp;{{actor_min}} > {{rmin}}&nbsp;{{localize "nkrbz.Common.rollChat"}}<br>
+      {{localize "nkrbz.Common.checkSuccess"}}
+    {{/ifgt}}
+    {{#ifgt rmin actor_min}}
+      {{localize "nkrbz.Common.attrChat"}}&nbsp;{{actor_min}} <= {{rmin}}&nbsp;{{localize "nkrbz.Common.rollChat"}}<br>
+      {{localize "nkrbz.Common.checkFailure"}}
+    {{/ifgt}}
+
+  {{/ife}}
+</div>
+<br>
+<br>

@@ -19,7 +19,17 @@
 			"CountsD20": "Количество 1d20",
 			"withHindrance": "Помеха",
 			"withAdvantage": "Преимущество",
-			"withNormal": "Обычное"
+			"withNormal": "Обычное",
+
+			"withHindranceChat": "Проверка с помехой",
+			"withAdvantageChat": "Проверка с преимуществом",
+			"withNormalChat": "Обычная проверка",
+
+			"checkSuccess": "Проверка успешна!",
+			"checkFailure": "Проверка провалилась!",
+
+			"attrChat": "Атрибут",
+			"rollChat": "Бросок"
 		},
 		
 		"Actor": {

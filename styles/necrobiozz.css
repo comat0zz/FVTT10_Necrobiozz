@@ -141,7 +141,7 @@ input[name="data.ammunition"] {
   float: left;
 }
 
-.chat-roll-weapon-msg, .chat-roll-weapon-damage, .chat-roll-weapon-threshold, .chat-roll-weapon-alert{
+.chat-roll-weapon-msg, .chat-roll-weapon-damage, .chat-roll-weapon-threshold, .chat-roll-weapon-alert, .chat-attrs-modify{
   text-align: center;
 }
 
