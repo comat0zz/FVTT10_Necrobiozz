@@ -38,7 +38,21 @@ Hooks.once("init", function () {
 
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet(game.system.id, NecrobiozzActorSheet, {
+    types: [
+      "hero",
+      "enemy"
+    ],
     makeDefault: true 
+  });
+
+  Handlebars.registerHelper('lzCc', function (str, val) {
+    return game.i18n.localize(str + val);
+  });
+
+  // if equal
+  Handlebars.registerHelper('ife', function (v1, v2, options) {
+    if (v1 === v2) return options.fn(this);
+    else return options.inverse(this);
   });
 
   // Pre-load HTML templates

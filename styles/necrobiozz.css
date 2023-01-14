@@ -19,3 +19,38 @@ table {
   border: 0;
   flex: 0;
 }
+
+
+.actor-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.actor-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.actor-img {
+  width: 290px
+}
+
+.actor-skills h3 {
+  width: 90%
+}
+
+.actor-skills ul, .actor-labels ul {
+  padding: 0;
+}
+.actor-skills li, .actor-labels li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.actor-labels li {
+  text-align: right;
+}

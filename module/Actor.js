@@ -1,4 +1,6 @@
 export default class NecrobiozzActor extends Actor {
-  async roll() {
+  prepareData() {
+    super.prepareData();
+    console.log(1)
   }
 }

@@ -28,7 +28,12 @@
 			"HordesSize": "Размер",
 			"Supervisor": "Руководитель заборатории",
 			"Code": "Код лабораторного образца",
+			"Name": "Лаборант",
 			"SkillsLabel": "Способности",
+			"SkillAgress": "Агрессивные",
+			"SkillCommon": "Обычные",
+			"SkillInt": "Сообразительные",
+			"SkillAgi": "Проворные",
 			"Skills": {
 				"Common": {
 					"fastheal": "Быстрое лечение",
