@@ -72,16 +72,26 @@
           <td class="actor-attrs"><input name="data.hordes.size.curr" type="text" value="{{systemData.hordes.size.curr}}" placeholder="" /></td>
           <td class="actor-attrs"><input name="data.hordes.size.max" type="text" value="{{systemData.hordes.size.max}}" placeholder="" /></td>
         </tr>
+        <tr>
+          <td colspan="3"><i>{{{localize "nkrbz.Actor.HordeTitle"}}}</i></td>
+        </tr>
       </table>
     </div>
     <div class='actor-column'>
       <h3>{{localize "nkrbz.Actor.Injuries"}}</h3>
-      <ul class="actor-injury">
-        <li><input name="data.injuries.inj1" type="text" value="{{systemData.injuries.inj1}}" placeholder="" /></li>
-        <li><input name="data.injuries.inj2" type="text" value="{{systemData.injuries.inj2}}" placeholder="" /></li>
-        <li><input name="data.injuries.inj3" type="text" value="{{systemData.injuries.inj3}}" placeholder="" /></li>
-        <li><input name="data.injuries.inj4" type="text" value="{{systemData.injuries.inj4}}" placeholder="" /></li>
-      </ul>
+      <table class="actor-item-equip">
+        {{#each isInjury as |item key|}}
+        <tr item-id="{{item.id}}" item-type="{{item.type}}">
+          <td><img src="{{item.img}}" alt="{{item.name}}"></td>
+          <td>{{item.name}}</td>
+          <td><i class="fa-solid fa-trash equip-item-del"></i></td>
+        </tr>
+        {{else}}
+          <tr>
+            <td>{{localize "nkrbz.Actor.noInjury"}}</td>
+          </tr>
+        {{/each}}
+      </table>
     </div>
   </div>
 </div>

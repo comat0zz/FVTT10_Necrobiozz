@@ -1,0 +1,21 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header flexrow">
+    <img class="profile-img" src="{{data.img}}" data-edit="img" title="{{data.name}}" />
+    <h1 class="charname">
+        <input name="name" type="text" value="{{data.name}}" />
+    </h1>
+  </header>
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <!-- <a class="item" data-tab="properties">{{localize "nkrbz.Item.Properties"}}</a> -->
+    <a class="item" data-tab="description">{{localize "nkrbz.Common.Description"}}</a>
+  </nav>
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+      <textarea class="editor" name="data.description">{{systemData.description}}</textarea>
+    </div>
+    
+  </section>
+</form>

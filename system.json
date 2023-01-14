@@ -32,6 +32,12 @@
       "system": "FVTT10_Necrobiozz",
       "path": "packs/items.db",
       "type": "Item"
+    },{
+      "name": "injuries",
+      "label": "Травмы",
+      "system": "FVTT10_Necrobiozz",
+      "path": "packs/injuries.db",
+      "type": "Item"
     }
   ],
   "languages": [

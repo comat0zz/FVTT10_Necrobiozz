@@ -41,12 +41,6 @@
         "notes6": "",
         "notes7": ""
       },
-      "injuries": {
-        "inj1": "",
-        "inj2": "",
-        "inj3": "",
-        "inj4": ""
-      },
       "skills": {
         "Common": {
           "fastheal": false, 
@@ -129,7 +123,8 @@
     "types": [
       "weapon",
       "armor",
-      "equipment"
+      "equipment",
+      "injuries"
     ],
     "templates":{
       "base": {
@@ -154,6 +149,9 @@
       "isSurval": false
     },
     "equipment": {
+      "templates": ["base"]
+    },
+    "injuries": {
       "templates": ["base"]
     }
   }

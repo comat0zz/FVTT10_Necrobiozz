@@ -10,6 +10,7 @@ import { registerSettings } from "./settings.js";
 async function preloadHandlebarsTemplates(){
   const templatePath = [
       "systems/FVTT10_Necrobiozz/templates/item-sheet.hbs",
+      "systems/FVTT10_Necrobiozz/templates/item-injuries-sheet.hbs",
       "systems/FVTT10_Necrobiozz/templates/item-armor-sheet.hbs",
       "systems/FVTT10_Necrobiozz/templates/item-equipment-sheet.hbs",
       "systems/FVTT10_Necrobiozz/templates/item-weapon-sheet.hbs",
@@ -31,7 +32,8 @@ Hooks.once("init", function () {
     types: [
       "equipment",
       "armor",
-      "weapon"
+      "weapon",
+      "injuries"
     ],
     makeDefault: true
   });

@@ -31,6 +31,7 @@ export default class NecrobiozzActorSheet extends ActorSheet {
     context.isWeapons = context.systemData.equips.filter((i) => i.type === "weapon");
     context.isArmor = context.systemData.equips.filter((i) => i.type === "armor");
     context.isEquip = context.systemData.equips.filter((i) => i.type === "equipment");
+    context.isInjury = context.systemData.equips.filter((i) => i.type === "injuries");
 
     console.log(context)
     return context;
@@ -90,7 +91,6 @@ export default class NecrobiozzActorSheet extends ActorSheet {
     var item_id = dragData.uuid.replace("Item.", "");
     var item =  game.items.get(item_id);
     let equips = this.actor.system.equips;
-    console.log(item)
     let newItem = {
       "id": genId(),
       "item_id": item_id,
