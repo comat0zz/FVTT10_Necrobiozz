@@ -33,17 +33,17 @@
         <h3>{{localize 'nkrbz.Actor.Attrs.Label'}}</h3>
         <table>
           <tr>
-              <td class="cgrab">{{localize "nkrbz.Actor.Attrs.Agr"}}</td>
+              <td class="cgrab actor-roll-attrs" attr-type="agr">{{localize "nkrbz.Actor.Attrs.Agr"}}</td>
               <td class="actor-attrs"><input name="data.attrs.agr.curr" type="text" value="{{systemData.attrs.agr.curr}}" placeholder="" /></td>
               <td class="actor-attrs"><input name="data.attrs.agr.max" type="text" value="{{systemData.attrs.agr.max}}" placeholder="" /></td>
             </tr>
             <tr>
-              <td class="cgrab">{{localize "nkrbz.Actor.Attrs.Agi"}}</td>
+              <td class="cgrab actor-roll-attrs" attr-type="agi">{{localize "nkrbz.Actor.Attrs.Agi"}}</td>
               <td class="actor-attrs"><input name="data.attrs.agi.curr" type="text" value="{{systemData.attrs.agi.curr}}" placeholder="" /></td>
               <td class="actor-attrs"><input name="data.attrs.agi.max" type="text" value="{{systemData.attrs.agi.max}}" placeholder="" /></td>
             </tr>
             <tr>
-              <td class="cgrab">{{localize "nkrbz.Actor.Attrs.Int"}}</td>
+              <td class="cgrab actor-roll-attrs" attr-type="int">{{localize "nkrbz.Actor.Attrs.Int"}}</td>
               <td class="actor-attrs"><input name="data.attrs.int.curr" type="text" value="{{systemData.attrs.int.curr}}" placeholder="" /></td>
               <td class="actor-attrs"><input name="data.attrs.int.max" type="text" value="{{systemData.attrs.int.max}}" placeholder="" /></td>
             </tr>
@@ -57,7 +57,7 @@
               <td colspan="2"><input name="data.attrs.brains" type="text" value="{{systemData.attrs.brains}}" placeholder="" /></td>
             </tr>
             <tr>
-              <td colspan="2" class="cgrab">{{localize "nkrbz.Actor.HandDmg"}}</td>
+              <td colspan="2" class="cgrab actor-roll-hand" attr-type="hand">{{localize "nkrbz.Actor.HandDmg"}}</td>
               <td class="actor-attrs">1</td>
             </tr>
             <tr>
@@ -97,7 +97,7 @@
       {{#each systemData.equips as |item key|}}
         <tr item-id="{{item.id}}" item-type="{{item.type}}">
           <td><img src="{{item.img}}">&nbsp;</td>
-          <td{{#ife item.type "weapon"}} class="cgrab weapon-roll"{{/ife}}>{{item.name}}
+          <td{{#ife item.type "weapon"}} class="cgrab actor-roll-weapon"{{/ife}}>{{item.name}}
             {{#ife item.type "weapon"}}
             <i>{{item.damage}}</i>
             {{/ife}}
@@ -108,7 +108,7 @@
             {{/ife}}
           </td>
           <td class="cgrab">
-            <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-trash equip-item-del"></i>
           </td>
         </tr>
       {{else}}

@@ -31,6 +31,50 @@ export default class NecrobiozzActorSheet extends ActorSheet {
     return context;
   }
 
+  activateListeners(html) {
+    super.activateListeners(html);
+
+    html.find('.actor-roll-weapon').click(evt => this._onActorRollWeapon(evt));
+    html.find('.actor-roll-attrs').click(evt => this._onActorRollAttrs(evt));
+    html.find('.actor-roll-hand').click(evt => this._onActorRollHand(evt));
+
+    html.find('.equip-item-del').click(evt => this._onEquipItemDel(evt));
+  }
+
+  _onActorRollWeapon(evt) {
+    evt.preventDefault();
+    const weapon_id = $(evt.currentTarget).closest('tr').attr('item-id'); 
+
+  }
+
+  _onActorRollAttrs(evt) {
+    evt.preventDefault();
+    const attrType = $(evt.currentTarget).attr('attr-type'); 
+
+
+  }
+
+  _onActorRollHand(evt) {
+    evt.preventDefault();
+    
+
+  }
+
+  _onEquipItemDel(evt) {
+    evt.preventDefault();
+    const item_id = $(evt.currentTarget).closest('tr').attr('item-id'); 
+    var equips = duplicate(this.actor.system.equips);
+    let newEquips = [];
+
+    equips.forEach(el => {
+      if(el.id !== item_id) {
+        newEquips.push(el);
+      }
+    });
+
+    this.actor.update({"data.equips": newEquips});
+  }
+
   /** @override */
   _onDrop(evt) { 
     evt.preventDefault();
