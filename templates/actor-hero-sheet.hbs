@@ -1,34 +1,31 @@
 <form class="{{cssClass}}" autocomplete="off">
-<div class='actor-wrapper'>
+
+<!-- Фотка, Название и имя персонажа -->
+<div class='actor-wrapper actor-info'>
   <div class='actor-row'>
-    <div class='actor-column actor-title'>
-        <ul>
-          <li>{{localize 'nkrbz.Common.Title'}}</li>
-          <li>{{localize 'nkrbz.Common.SubTitle'}}</li>
-        </ul>
+    <div class='actor-column actor-image-column'>
+        <img class="actor-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+    </div>
+    <div class='actor-column actor-title-column'>
+      <ul>
+        <li>{{localize 'nkrbz.Common.Title'}}</li>
+        <li>{{localize 'nkrbz.Common.SubTitle'}}</li>
+      </ul>
     </div>
     <div class='actor-column actor-labels'>
       <ul>
-        <li>{{localize "nkrbz.Actor.Supervisor"}}&nbsp;</li>
-        <li>{{localize "nkrbz.Actor.Name"}}&nbsp;</li>
-        <li>{{localize "nkrbz.Actor.Code"}}&nbsp;</li>
+        <li>{{localize "nkrbz.Actor.Supervisor"}}&nbsp;<input name="data.supervisor" type="text" value="{{systemData.supervisor}}" placeholder="" /></li>
+        <li>{{localize "nkrbz.Actor.Name"}}&nbsp;<input name="name" type="text" value="{{data.name}}" placeholder="" /></li>
+        <li>{{localize "nkrbz.Actor.Code"}}&nbsp;<input name="data.code" type="text" value="{{systemData.code}}" placeholder="" /></li>
       </ul>
-    </div>
-    <div class='actor-column actor-head-input'>
-        <ul>
-          <li><input name="data.supervisor" type="text" value="{{systemData.supervisor}}" placeholder="" /></li>
-          <li><input name="name" type="text" value="{{data.name}}" placeholder="" /></li>
-          <li><input name="data.code" type="text" value="{{systemData.code}}" placeholder="" /></li>
-        </ul>
     </div>
   </div>
 </div>
 
+<!--  Атрибуты, Орда, Травмы -->
 <div class='actor-wrapper'>
   <div class='actor-row'>
-    <div class='actor-column'>
-        <img class="actor-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
-    </div>
+    
     <div class='actor-column actor-attr-block'>
         <h3>{{localize 'nkrbz.Actor.Attrs.Label'}}</h3>
         <table>
@@ -119,50 +116,73 @@
   </div>
 </div>
 
-<h2>{{localize "nkrbz.Actor.SkillsLabel"}}</h2>
-<div class='actor-wrapper actor-skills'>
+{{!-- Sheet Tab Navigation --}}
+<nav class="sheet-tabs tabs" data-group="primary">
+  <a class="item" data-tab="weaponequip">{{localize "nkrbz.Common.Weaponequip"}}</a>
+  <a class="item" data-tab="skills">{{localize "nkrbz.Actor.SkillsLabel"}}</a>
+  <a class="item" data-tab="description">{{localize "nkrbz.Common.ForNotes"}}</a>
+</nav>
+
+{{!-- Sheet Body --}}
+<section class="sheet-body">
+  {{!-- Снаряга и оружие Tab --}}
+  <div class="tab weaponequip" data-group="primary" data-tab="weaponequip">
+
+  </div>
+  {{!-- Способности Tab --}}
+  <div class="tab skills" data-group="primary" data-tab="skills">
+    <div class='actor-wrapper actor-skills'>
   <div class='actor-row'>
     <div class='actor-column'>
       <h3>{{localize "nkrbz.Actor.SkillCommon"}}</h3>
-      <ul>
-        {{#each config.Skills.Common as |name key|}}
-            <li>
-              <input type="checkbox" name="data.skills.Common.{{name}}" {{checked (lookup ../systemData.skills.Common name)}}/>  
-              {{#ife name "masspl"}}
-                <input type="checkbox" name="data.skills.Common.masspl_2" {{checked ../systemData.skills.Common.masspl_2}}/>
-                <input type="checkbox" name="data.skills.Common.masspl_3" {{checked ../systemData.skills.Common.masspl_3}}/>  
-              {{/ife}}
-              {{#ife name "puthand"}}
-                <input type="checkbox" name="data.skills.Common.puthand_2" {{checked ../systemData.skills.Common.puthand_2}}/>
-                <input type="checkbox" name="data.skills.Common.puthand_3" {{checked ../systemData.skills.Common.puthand_3}}/>  
-              {{/ife}}
-              {{lzCc "nkrbz.Actor.Skills.Common." name}}
-            </li>          
-        {{/each}}
-      </ul>
-    </div>
-    <div class='actor-column'>
-      <h3>{{localize "nkrbz.Actor.SkillAgress"}}</h3>
-      <ul>
-        {{#each config.Skills.Agresses as |name key|}}
-          <li><input type="checkbox" name="data.skills.Agresses.{{name}}" {{checked (lookup ../systemData.skills.Agresses name)}}/>  {{lzCc "nkrbz.Actor.Skills.Agresses." name}}</li>
-        {{/each}}
-      </ul>
-      <h3>{{localize "nkrbz.Actor.SkillAgi"}}</h3>
-      <ul>
-        {{#each config.Skills.Agilities as |name key|}}
-          <li><input type="checkbox" name="data.skills.Agilities.{{name}}" {{checked (lookup ../systemData.skills.Agilities name)}}/>  {{lzCc "nkrbz.Actor.Skills.Agilities." name}}</li>
-        {{/each}}
-      </ul>
-    </div>
-    <div class='actor-column'>
-      <h3>{{localize "nkrbz.Actor.SkillInt"}}</h3>
-      <ul>
-        {{#each config.Skills.Intelegent as |name key|}}
-          <li><input type="checkbox" name="data.skills.Intelegent.{{name}}" {{checked (lookup ../systemData.skills.Intelegent name)}}/>  {{lzCc "nkrbz.Actor.Skills.Intelegent." name}}</li>
-        {{/each}}
-      </ul>
+        <ul>
+          {{#each config.Skills.Common as |name key|}}
+              <li>
+                <input type="checkbox" name="data.skills.Common.{{name}}" {{checked (lookup ../systemData.skills.Common name)}}/>  
+                {{#ife name "masspl"}}
+                  <input type="checkbox" name="data.skills.Common.masspl_2" {{checked ../systemData.skills.Common.masspl_2}}/>
+                  <input type="checkbox" name="data.skills.Common.masspl_3" {{checked ../systemData.skills.Common.masspl_3}}/>  
+                {{/ife}}
+                {{#ife name "puthand"}}
+                  <input type="checkbox" name="data.skills.Common.puthand_2" {{checked ../systemData.skills.Common.puthand_2}}/>
+                  <input type="checkbox" name="data.skills.Common.puthand_3" {{checked ../systemData.skills.Common.puthand_3}}/>  
+                {{/ife}}
+                {{lzCc "nkrbz.Actor.Skills.Common." name}}
+              </li>          
+          {{/each}}
+        </ul>
+      </div>
+      <div class='actor-column'>
+        <h3>{{localize "nkrbz.Actor.SkillAgress"}}</h3>
+        <ul>
+          {{#each config.Skills.Agresses as |name key|}}
+            <li><input type="checkbox" name="data.skills.Agresses.{{name}}" {{checked (lookup ../systemData.skills.Agresses name)}}/>  {{lzCc "nkrbz.Actor.Skills.Agresses." name}}</li>
+          {{/each}}
+        </ul>
+        <h3>{{localize "nkrbz.Actor.SkillAgi"}}</h3>
+        <ul>
+          {{#each config.Skills.Agilities as |name key|}}
+            <li><input type="checkbox" name="data.skills.Agilities.{{name}}" {{checked (lookup ../systemData.skills.Agilities name)}}/>  {{lzCc "nkrbz.Actor.Skills.Agilities." name}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class='actor-column'>
+        <h3>{{localize "nkrbz.Actor.SkillInt"}}</h3>
+        <ul>
+          {{#each config.Skills.Intelegent as |name key|}}
+            <li><input type="checkbox" name="data.skills.Intelegent.{{name}}" {{checked (lookup ../systemData.skills.Intelegent name)}}/>  {{lzCc "nkrbz.Actor.Skills.Intelegent." name}}</li>
+          {{/each}}
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+  </div>
+  {{!-- Для заметок Tab --}}
+  <div class="tab" data-group="primary" data-tab="description">
+    <textarea class="editor" name="data.description">{{systemData.description}}</textarea>
+  </div>
+</section>
+
+
+
 </form>

@@ -10,8 +10,9 @@ export default class NecrobiozzActorSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["necrobiozz", "sheet", "actor"],
-      width: 900,
-      height: 800
+      width: 720,
+      height: 800,
+      tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "weaponequip"}]
     });
   }
 
@@ -50,7 +51,8 @@ export default class NecrobiozzActorSheet extends ActorSheet {
   _onActorRollAttrs(evt) {
     evt.preventDefault();
     const attrType = $(evt.currentTarget).attr('attr-type'); 
-
+    console.log(attrType);
+    console.log(this.actor.system.attrs[attrType].curr)
 
   }
 

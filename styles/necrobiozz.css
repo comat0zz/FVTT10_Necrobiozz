@@ -35,18 +35,31 @@ table {
   flex: 1;
 }
 
+.actor-info {
+  margin-bottom: 10px;
+}
+
 .actor-img {
-  width: 290px
+  width: 85px;
+  height: 85px;
+}
+
+.actor-image-column, .actor-title-column {
+  flex: 0 0 auto;
+}
+
+.actor-title-column {
+  margin-left: 15px
 }
 
 .actor-skills h3 {
   width: 90%
 }
 
-.actor-skills ul, .actor-labels ul, .actor-head-input ul, .actor-title ul, .actor-QuickAction, .actor-injury {
+.actor-skills ul, .actor-labels ul, .actor-head-input ul, .actor-title-column ul, .actor-QuickAction, .actor-injury {
   padding: 0;
 }
-.actor-skills li, .actor-labels li, .actor-head-input li, .actor-title li, .actor-QuickAction li, .actor-injury li {
+.actor-skills li, .actor-labels li, .actor-head-input li, .actor-title-column li, .actor-QuickAction li, .actor-injury li {
   list-style: none;
   margin-left: 0;
 }
@@ -55,17 +68,20 @@ table {
   text-align: right;
   line-height: 26px;
 }
+.actor-labels li input {
+  width: 200px
+}
 
-.actor-title li {
+.actor-title-column li {
   text-align: center;
 }
 
-.actor-title li:first-child {
+.actor-title-column li:first-child {
   font-weight: bold;
   font-size: large;
 }
 
-.actor-title li:last-child {
+.actor-title-column li:last-child {
   font-weight: lighter;
 }
 
