@@ -25,8 +25,14 @@
 			
 			"HandDmg": "Урон без оружия",
 			"Injuries": "Травмы",
+			"itWeapons": "Оружие",
+			"itArmor": "Броня",
+			"itEquips": "Снаряжение",
+			"itOthers": "Прочее",
+
 			"Equips": "Снаряжение",
 			"noEquips": "Нет снаряжения",
+			"noArmor": "Нет брони",
 			"Ammo": "Магазины с патронами",
 			"HordesLabel": "Орда",
 			"HordesHP": "Здоровье",

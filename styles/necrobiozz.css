@@ -20,6 +20,15 @@ table {
   flex: 0;
 }
 
+ul {
+  margin-top: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 0;
+}
 
 .actor-row {
   display: flex;
@@ -54,14 +63,6 @@ table {
 
 .actor-skills h3 {
   width: 90%
-}
-
-.actor-skills ul, .actor-labels ul, .actor-head-input ul, .actor-title-column ul, .actor-QuickAction, .actor-injury {
-  padding: 0;
-}
-.actor-skills li, .actor-labels li, .actor-head-input li, .actor-title-column li, .actor-QuickAction li, .actor-injury li {
-  list-style: none;
-  margin-left: 0;
 }
 
 .actor-labels li {
@@ -110,10 +111,24 @@ h3 {
   margin-bottom: 0;
 }
 
-ul {
-  margin-top: 0;
-}
+
 
 .actor-skills input[type=checkbox] {
   margin: 0
+}
+
+
+.weaponequip .actor-column {
+  padding: 0px 5px 0px 5px;
+}
+
+.weaponequip .equip-sideright {
+  flex: 0 0 auto;
+  width: 230px
+}
+
+input[name="data.ammunition"] {
+  width: 50px;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }

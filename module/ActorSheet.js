@@ -28,6 +28,10 @@ export default class NecrobiozzActorSheet extends ActorSheet {
     context.systemData = context.data.system;
     context.config = CONFIG.Necrobiozz;
 
+    context.isWeapons = context.systemData.equips.filter((i) => i.type === "weapon");
+    context.isArmor = context.systemData.equips.filter((i) => i.type === "armor");
+    context.isEquip = context.systemData.equips.filter((i) => i.type === "equipment");
+
     console.log(context)
     return context;
   }

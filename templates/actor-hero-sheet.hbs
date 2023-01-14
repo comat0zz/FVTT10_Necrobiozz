@@ -53,24 +53,10 @@
               <td>{{localize "nkrbz.Actor.Attrs.brains"}}</td>
               <td colspan="2"><input name="data.attrs.brains" type="text" value="{{systemData.attrs.brains}}" placeholder="" /></td>
             </tr>
-            <tr>
-              <td colspan="2" class="cgrab actor-roll-hand" attr-type="hand">{{localize "nkrbz.Actor.HandDmg"}}</td>
-              <td class="actor-attrs">1</td>
-            </tr>
-            <tr>
-              <td>{{localize "nkrbz.Actor.Ammo"}}</td>
-              <td colspan="2"><input name="data.ammunition" type="text" value="{{systemData.ammunition}}" placeholder="" /></td>
-            </tr>
         </table>
     </div>
     <div class='actor-column actor-attr-block'>
-      <h3>{{localize "nkrbz.Actor.Injuries"}}</h3>
-      <ul class="actor-injury">
-        <li><input name="data.injuries.inj1" type="text" value="{{systemData.injuries.inj1}}" placeholder="" /></li>
-        <li><input name="data.injuries.inj2" type="text" value="{{systemData.injuries.inj2}}" placeholder="" /></li>
-        <li><input name="data.injuries.inj3" type="text" value="{{systemData.injuries.inj3}}" placeholder="" /></li>
-        <li><input name="data.injuries.inj4" type="text" value="{{systemData.injuries.inj4}}" placeholder="" /></li>
-      </ul>
+      
       <h3>{{localize "nkrbz.Actor.HordesLabel"}}</h3>
       <table>
         <tr>
@@ -89,29 +75,13 @@
       </table>
     </div>
     <div class='actor-column'>
-      <h3>{{localize "nkrbz.Actor.Equips"}}</h3>
-      <table class="actor-item-equip">
-      {{#each systemData.equips as |item key|}}
-        <tr item-id="{{item.id}}" item-type="{{item.type}}">
-          <td><img src="{{item.img}}">&nbsp;</td>
-          <td{{#ife item.type "weapon"}} class="cgrab actor-roll-weapon"{{/ife}}>{{item.name}}
-            {{#ife item.type "weapon"}}
-            <i>{{item.damage}}</i>
-            {{/ife}}
-            {{#ife item.type "armor"}}
-              {{#if item.isSurval}}
-              <i>+{{item.survVal}}</i>
-              {{/if}}
-            {{/ife}}
-          </td>
-          <td class="cgrab">
-            <i class="fa-solid fa-trash equip-item-del"></i>
-          </td>
-        </tr>
-      {{else}}
-      <tr><td>{{localize "nkrbz.Actor.noEquips"}}</td></tr>
-      {{/each}}
-      </table>
+      <h3>{{localize "nkrbz.Actor.Injuries"}}</h3>
+      <ul class="actor-injury">
+        <li><input name="data.injuries.inj1" type="text" value="{{systemData.injuries.inj1}}" placeholder="" /></li>
+        <li><input name="data.injuries.inj2" type="text" value="{{systemData.injuries.inj2}}" placeholder="" /></li>
+        <li><input name="data.injuries.inj3" type="text" value="{{systemData.injuries.inj3}}" placeholder="" /></li>
+        <li><input name="data.injuries.inj4" type="text" value="{{systemData.injuries.inj4}}" placeholder="" /></li>
+      </ul>
     </div>
   </div>
 </div>
@@ -128,6 +98,85 @@
   {{!-- Снаряга и оружие Tab --}}
   <div class="tab weaponequip" data-group="primary" data-tab="weaponequip">
 
+    <div class='actor-wrapper'>
+      <div class='actor-row'>
+        <div class='actor-column equip-sideleft'>
+          <h3>{{localize "nkrbz.Actor.itWeapons"}}</h3>
+          <table class="actor-item-equip">
+            <tr>
+              <td><img src="systems/FVTT10_Necrobiozz/assets/evil-hand.png" alt="{{localize "nkrbz.Actor.HandDmg"}}"></td>
+              <td>{{localize "nkrbz.Actor.HandDmg"}}</td>
+              <td>1</td>
+              <td>-</td>
+            </tr>
+            {{#each isWeapons as |item key|}}
+            <tr item-id="{{item.id}}" item-type="{{item.type}}">
+              <td><img src="{{item.img}}" alt="{{item.name}}"></td>
+              <td>{{item.name}}</td>
+              <td>{{item.damage}}</td>
+              <td><i class="fa-solid fa-trash equip-item-del"></i></td>
+            </tr>
+            {{/each}}
+          </table>
+          <h3>{{localize "nkrbz.Actor.itArmor"}}</h3>
+          <table class="actor-item-equip">
+            {{#each isArmor as |item key|}}
+            <tr item-id="{{item.id}}" item-type="{{item.type}}">
+              <td><img src="{{item.img}}" alt="{{item.name}}"></td>
+              <td>{{item.name}}</td>
+              <td>{{#if item.isSurval}}+{{item.survVal}}{{/if}}</td>
+              <td><i class="fa-solid fa-trash equip-item-del"></i></td>
+            </tr>
+            {{else}}
+            <tr>
+              <td colspan="4">{{localize "nkrbz.Actor.noArmor"}}</td>
+            </tr>
+            {{/each}}
+          </table>
+          <h3>{{localize "nkrbz.Actor.itEquips"}}</h3>
+          <table class="actor-item-equip">
+            {{#each isEquip as |item key|}}
+            <tr item-id="{{item.id}}" item-type="{{item.type}}">
+              <td><img src="{{item.img}}" alt="{{item.name}}"></td>
+              <td>{{item.name}}</td>
+              <td><i class="fa-solid fa-trash equip-item-del"></i></td>
+            </tr>
+            {{else}}
+            <tr>
+              <td colspan="3">{{localize "nkrbz.Actor.noEquips"}}</td>
+            </tr>
+            {{/each}}
+          </table>
+        </div>
+        <div class='actor-column equip-sideright'>
+        <h3>{{localize "nkrbz.Actor.itOthers"}}</h3>
+          <ul>
+            <li>{{localize "nkrbz.Actor.Ammo"}} <input name="data.ammunition" type="text" value="{{systemData.ammunition}}" placeholder="" /></li>
+            <li>
+              <input name="data.equipsNotes.notes1" type="text" value="{{systemData.equipsNotes.notes1}}" placeholder="" />
+            </li>
+            <li>
+              <input name="data.equipsNotes.notes2" type="text" value="{{systemData.equipsNotes.notes2}}" placeholder="" />
+            </li>
+            <li>
+              <input name="data.equipsNotes.notes3" type="text" value="{{systemData.equipsNotes.notes3}}" placeholder="" />
+            </li>
+            <li>
+              <input name="data.equipsNotes.notes4" type="text" value="{{systemData.equipsNotes.notes4}}" placeholder="" />
+            </li>
+            <li>
+              <input name="data.equipsNotes.notes5" type="text" value="{{systemData.equipsNotes.notes5}}" placeholder="" />
+            </li>
+            <li>
+              <input name="data.equipsNotes.notes6" type="text" value="{{systemData.equipsNotes.notes6}}" placeholder="" />
+            </li>
+            <li>
+              <input name="data.equipsNotes.notes7" type="text" value="{{systemData.equipsNotes.notes7}}" placeholder="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
   {{!-- Способности Tab --}}
   <div class="tab skills" data-group="primary" data-tab="skills">
@@ -182,7 +231,4 @@
     <textarea class="editor" name="data.description">{{systemData.description}}</textarea>
   </div>
 </section>
-
-
-
 </form>
