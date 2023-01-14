@@ -16,7 +16,9 @@ async function preloadHandlebarsTemplates(){
       "systems/FVTT10_Necrobiozz/templates/item-weapon-sheet.hbs",
       "systems/FVTT10_Necrobiozz/templates/actor-hero-sheet.hbs",
       "systems/FVTT10_Necrobiozz/templates/actor-enemy-sheet.hbs",
-      "systems/FVTT10_Necrobiozz/templates/chat-weapon-roll.hbs"
+      "systems/FVTT10_Necrobiozz/templates/chat-weapon-roll.hbs",
+      "systems/FVTT10_Necrobiozz/templates/dialog-attrs-roll.hbs",
+      "systems/FVTT10_Necrobiozz/templates/chat-attrs-roll.hbs"      
   ];
   return loadTemplates(templatePath); 
 }

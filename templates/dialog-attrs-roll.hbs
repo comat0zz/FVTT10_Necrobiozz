@@ -1,0 +1,29 @@
+<form>
+  <table>
+    <tr>
+      <td colspan="2">{{localize "nkrbz.Common.CountsD20"}}</td>
+      <td><input type="text" name="count_dices" value="1"  data-dtype="Number" /></td>
+    </tr>
+    <tr>
+      <td>
+        <label>
+          <input type="radio" name="modificator" value="1" />
+          {{localize "nkrbz.Common.withHindrance"}}
+        </label>
+      </td>
+      <td>
+        <label>
+          <input type="radio" name="modificator" value="2" checked="checked" />
+          {{localize "nkrbz.Common.withNormal"}}
+        </label>
+      </td>
+      <td>
+        <label>
+          <input type="radio" name="modificator" value="3" />
+          {{localize "nkrbz.Common.withAdvantage"}}
+        </label>
+      </td>
+    </tr>
+  </table>
+</form>
+ 

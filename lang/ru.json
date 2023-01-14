@@ -10,7 +10,16 @@
 			"SubTitle": "Предварительный отчёт",
 			"QuickAction": "Быстрые действия",
 			"ForNotes": "Для заметок",
-			"Weaponequip": "Оружие и снаряжение"
+			"Weaponequip": "Оружие и снаряжение",
+			"Buttons": {
+				"Cancel": "Отмена"
+			
+			},
+			"CheckAttrs": "Проверка атрибута",
+			"CountsD20": "Количество 1d20",
+			"withHindrance": "Помеха",
+			"withAdvantage": "Преимущество",
+			"withNormal": "Обычное"
 		},
 		
 		"Actor": {

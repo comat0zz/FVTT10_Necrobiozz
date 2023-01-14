@@ -16,6 +16,12 @@ Necrobiozz.Enemies = {
 
 }
 
+Necrobiozz.Attrs = {
+  "agi": "nkrbz.Actor.Attrs.Agi",
+  "agr": "nkrbz.Actor.Attrs.Agr",
+  "int": "nkrbz.Actor.Attrs.Int"
+}
+
 Necrobiozz.Skills = {
   "Common": ["fastheal", "masspl", "regen", "fastinf", "necrospore", "puthand", "flair", "infyey", "selfsom", "deadface", "nohangry"],
   "Agresses": ["str", "gromila", "arm", "kogti", "blades", "argghh", "electric", "emizom"],

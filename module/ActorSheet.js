@@ -97,14 +97,65 @@ export default class NecrobiozzActorSheet extends ActorSheet {
     });
   }
 
-  _onActorRollAttrs(evt) {
+  async checkAttr(attr, html) {
+    
+    const actor_min = this.actor.system.attrs[attr].curr;
+    const actor_max = this.actor.system.attrs[attr].max;
+
+    const dices = html.find(`form input[name=count_dices]`).val();
+    const mod = html.find(`form input[type=radio][name=modificator]:checked`).val();
+
+    let roll = await new Roll(`${dices}d20`).evaluate({async: true});
+    let sortedResults = roll.terms[0].results.map(r => {return r.result}).sort(function(a, b) {
+      return b - a;});
+    
+      const tpl = await renderTemplate("systems/FVTT10_Necrobiozz/templates/chat-attrs-roll.hbs", {
+        terms: `${dices}d20`,
+        row: sortedResults.join(', '),
+        rmax: sortedResults[0],
+        rmin: sortedResults.slice(-1),
+        attr: attr,
+        modify: mod,
+        actor: {
+          min: actor_min,
+          max: actor_max
+        },
+        attrLabel: CONFIG.Necrobiozz.Attrs[attr]
+      });
+  
+    ChatMessage.create({
+        user: game.user._id,
+        speaker: ChatMessage.getSpeaker(),
+        content: tpl
+    });
+  }
+
+  async _onActorRollAttrs(evt) {
     evt.preventDefault();
     const attrType = $(evt.currentTarget).attr('attr-type'); 
-    console.log(attrType);
-    console.log(this.actor.system.attrs[attrType].curr)
 
-    //let roll = new Roll(`1d20${skillData.total}`).roll({async: true});
-
+    const template = await renderTemplate("systems/FVTT10_Necrobiozz/templates/dialog-attrs-roll.hbs");
+    return new Promise(resolve => {
+      const data = {
+        title: game.i18n.localize("nkrbz.Common.CheckAttrs"),
+        content: template,
+        buttons: {
+          cancel: {
+            icon: '<i class="fas fa-times"></i>',
+            label: game.i18n.localize("nkrbz.Common.Buttons.Cancel"),
+            callback: html => resolve({cancelled: true})
+          },
+          yes: {
+            icon: '<i class="fas fa-check"></i>',
+            label: game.i18n.localize("nkrbz.Common.Select.Yes"),
+            callback: html => resolve(this.checkAttr(attrType, html))
+           }        
+        },
+        default: "cancel",
+        close: () => resolve({cancelled: true})
+      }
+      new Dialog(data, null).render(true);
+    });
   }
 
   _onEquipItemDel(evt) {
