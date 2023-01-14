@@ -1,8 +1,8 @@
 {
-  "id": "FVTT10_Necrobiozz",
+  "id": "necrobiozz",
   "title": "TTRPG Necrobiozz",
   "description": "Игра про мертвецов от студии Ex_Nihilum",
-  "version": "1.2",
+  "version": "1.4",
   "compatibility": {
     "minimum": 10,
     "verified": 10.291
@@ -29,13 +29,13 @@
     {
       "name": "items",
       "label": "Предметы",
-      "system": "FVTT10_Necrobiozz",
+      "system": "necrobiozz",
       "path": "packs/items.db",
       "type": "Item"
     },{
       "name": "injuries",
       "label": "Травмы",
-      "system": "FVTT10_Necrobiozz",
+      "system": "necrobiozz",
       "path": "packs/injuries.db",
       "type": "Item"
     }
