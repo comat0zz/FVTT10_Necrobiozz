@@ -1,3 +1,66 @@
 <form class="{{cssClass}}" autocomplete="off">
 
+<div class='actor-wrapper enemy-name-field'>
+  <div class='actor-row'>
+  <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'nkrbz.Actor.NameEnemy'}}" />
+  </div>
+</div>
+
+<div class='actor-wrapper'>
+  <div class='actor-row'>
+    
+    <div class='actor-column'>
+      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+    </div>
+    <div class='actor-column actor-attr-block'>
+      <h3>{{localize 'nkrbz.Actor.Attrs.Label'}}</h3>
+        <table>
+          <tr>
+              <td class="cgrab actor-roll-attrs" attr-type="agr">{{localize "nkrbz.Actor.Attrs.Agr"}}</td>
+              <td class="actor-attrs"><input name="data.attrs.agr.curr" type="text" value="{{systemData.attrs.agr.curr}}" placeholder="" /></td>
+              <td class="actor-attrs"><input name="data.attrs.agr.max" type="text" value="{{systemData.attrs.agr.max}}" placeholder="" /></td>
+          </tr>
+          <tr>
+              <td class="cgrab actor-roll-attrs" attr-type="agi">{{localize "nkrbz.Actor.Attrs.Agi"}}</td>
+              <td class="actor-attrs"><input name="data.attrs.agi.curr" type="text" value="{{systemData.attrs.agi.curr}}" placeholder="" /></td>
+              <td class="actor-attrs"><input name="data.attrs.agi.max" type="text" value="{{systemData.attrs.agi.max}}" placeholder="" /></td>
+          </tr>
+          <tr>
+              <td class="cgrab actor-roll-attrs" attr-type="int">{{localize "nkrbz.Actor.Attrs.Int"}}</td>
+              <td class="actor-attrs"><input name="data.attrs.int.curr" type="text" value="{{systemData.attrs.int.curr}}" placeholder="" /></td>
+              <td class="actor-attrs"><input name="data.attrs.int.max" type="text" value="{{systemData.attrs.int.max}}" placeholder="" /></td>
+          </tr>
+          <tr>
+              <td>{{localize "nkrbz.Actor.Attrs.srv"}}</td>
+              <td class="actor-attrs"><input name="data.attrs.srv.curr" type="text" value="{{systemData.attrs.srv.curr}}" placeholder="" /></td>
+              <td class="actor-attrs"><input name="data.attrs.srv.max" type="text" value="{{systemData.attrs.srv.max}}" placeholder="" /></td>
+          </tr>
+        </table>
+    </div>
+    <div class='actor-column'>
+      <h3>{{localize "nkrbz.Actor.itEquips"}}</h3>
+      <table class="actor-item-equip">
+            {{#each systemData.items as |item key|}}
+            <tr item-id="{{item.id}}" item-type="{{item.type}}">
+              <td><img src="{{item.img}}" alt="{{item.name}}"></td>
+              <td class="actor-roll-weapon">{{item.name}}</td>
+              <td><i class="fa-solid fa-trash equip-item-del"></i></td>
+            </tr>
+            {{else}}
+            <tr>
+              <td colspan="3">{{localize "nkrbz.Actor.noEquips"}}</td>
+            </tr>
+          {{/each}}
+        </table>
+    </div>
+  </div>
+</div>
+
+<div class='actor-wrapper'>
+  <div class='actor-row'>
+    <div class='actor-column'>
+    {{editor systemData.description target="system.description" button=true engine="tinymce" collaborate=false}}
+    </div>
+  </div>
+</div>
 </form>

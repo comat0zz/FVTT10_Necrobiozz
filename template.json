@@ -128,7 +128,24 @@
     },
     "named_adversary": {
       "templates": ["baseActor"],
-      "strength": 0,
+      "attrs": {
+        "agr": {
+          "max": 0,
+          "curr": 0
+        },
+        "agi": {
+          "max": 0,
+          "curr": 0
+        },
+        "int": {
+          "max": 0,
+          "curr": 0
+        }, 
+        "srv": {
+          "max": 0,
+          "curr": 0
+        }
+      },
       "damage": 0,
       "capabilities": "",
       "items": []
