@@ -10,8 +10,8 @@
   display: none;
 }
 
-.editor {
-  height: 200px;
+.actor .editor {
+  height: 420px;
 }
 
 table {

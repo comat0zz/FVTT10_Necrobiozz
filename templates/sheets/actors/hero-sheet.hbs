@@ -114,7 +114,7 @@
           <h3>{{localize "nkrbz.Actor.itWeapons"}}</h3>
           <table class="actor-item-equip">
             <tr>
-              <td><img src="systems/necrobiozz/assets/evil-hand.png" alt="{{localize "nkrbz.Actor.HandDmg"}}"></td>
+              <td><img src="{{get_assets "evil-hand.png"}}" alt="{{localize "nkrbz.Actor.HandDmg"}}"></td>
               <td>{{localize "nkrbz.Actor.HandDmg"}}</td>
               <td>1</td>
               <td>-</td>
@@ -238,7 +238,7 @@
   </div>
   {{!-- Для заметок Tab --}}
   <div class="tab" data-group="primary" data-tab="description">
-    <textarea class="editor" name="data.description">{{systemData.description}}</textarea>
+    {{editor content=systemData.description target="data.description" button=true owner=owner editable=editable}}
   </div>
 </section>
 </form>

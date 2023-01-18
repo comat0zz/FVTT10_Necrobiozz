@@ -1,4 +1,17 @@
 {
+	"ACTOR": {
+		"TypeHero": "Зомби игрока",
+		"TypeSimple_adversary": "Противник",
+		"TypeNamed_adversary": "Именной противник",
+		"TypeAllies": "Союзник"
+	},
+	"ITEM": {
+		"TypeWeapon": "Оружие",
+		"TypeArmor": "Броня",
+		"TypeEquipment": "Снаряжение",
+		"TypeInjuries": "Травма"
+	},
+
 	"nkrbz": {
 		"Common": {
 			"Description": "Описание",

@@ -33,6 +33,11 @@ function registerHandlebarsHelpers() {
     return game.i18n.localize(str + val);
   });
 
+  // Отвязываем картинки от путей
+  Handlebars.registerHelper('get_assets', function (asset) {
+    return `${game.system_path}/assets/${asset}`;
+  });
+
   // if equal v1 == v2
   Handlebars.registerHelper('ife', function (v1, v2, options) {
     if (v1 === v2) return options.fn(this);
