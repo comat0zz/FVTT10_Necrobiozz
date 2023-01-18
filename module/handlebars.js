@@ -6,20 +6,19 @@ export const initializeHandlebars = () => {
 const preloadHandlebarsTemplates = async function () {
   // Define template paths to load
   const templatePaths = [
-    `${game.system_path}/templates/item-sheet.hbs`,
-    `${game.system_path}/templates/item-injuries-sheet.hbs`,
-    `${game.system_path}/templates/item-armor-sheet.hbs`,
-    `${game.system_path}/templates/item-equipment-sheet.hbs`,
-    `${game.system_path}/templates/item-weapon-sheet.hbs`,
+    `${game.system_path}/templates/sheets/items/injuries-sheet.hbs`,
+    `${game.system_path}/templates/sheets/items/armor-sheet.hbs`,
+    `${game.system_path}/templates/sheets/items/equipment-sheet.hbs`,
+    `${game.system_path}/templates/sheets/items/weapon-sheet.hbs`,
 
-    `${game.system_path}/templates/actor-hero-sheet.hbs`,
-    `${game.system_path}/templates/actor-named_adversary-sheet.hbs`,
-    `${game.system_path}/templates/actor-simple_adversary-sheet.hbs`,
-    `${game.system_path}/templates/actor-allies-sheet.hbs`,
+    `${game.system_path}/templates/sheets/actors/hero-sheet.hbs`,
+    `${game.system_path}/templates/sheets/actors/named_adversary-sheet.hbs`,
+    `${game.system_path}/templates/sheets/actors/simple_adversary-sheet.hbs`,
+    `${game.system_path}/templates/sheets/actors/allies-sheet.hbs`,
 
-    `${game.system_path}/templates/dialog-attrs-roll.hbs`,
-    `${game.system_path}/templates/chat-weapon-roll.hbs`,
-    `${game.system_path}/templates/chat-attrs-roll.hbs`      
+    `${game.system_path}/templates/dialogs/attrs-roll.hbs`,
+    `${game.system_path}/templates/chats/weapon-roll.hbs`,
+    `${game.system_path}/templates/chats/attrs-roll.hbs`      
   ];
 
   // Load the template parts

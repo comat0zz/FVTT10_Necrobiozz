@@ -1,10 +1,11 @@
-import { genId } from "./utils.js";
+import { BaseActorSheet } from "../BaseActorSheet.js";
+import { genId } from "../../utils.js";
 
 /**
  * Extend the base Actor document to support attributes and groups with a custom template creation dialog.
  * @extends {Actor}
  */
-export default class NecrobiozzActorSheet extends ActorSheet {
+export class HeroActorSheet extends BaseActorSheet {
 
   /** @override */
   static get defaultOptions() {
@@ -14,11 +15,6 @@ export default class NecrobiozzActorSheet extends ActorSheet {
       height: 800,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "weaponequip"}]
     });
-  }
-
-  /** @override */
-  get template() {
-    return `systems/necrobiozz/templates/actor-${this.actor.type}-sheet.hbs`;
   }
 
   /** @inheritdoc */
@@ -75,8 +71,7 @@ export default class NecrobiozzActorSheet extends ActorSheet {
       const lenInj = injuries.length - 1;
       injury = injuries[this.getRandomInt(0,lenInj)];
     }
-
-    const html = await renderTemplate("systems/necrobiozz/templates/chat-weapon-roll.hbs", {
+    const html = await renderTemplate(`${game.system_path}/templates/chats/weapon-roll.hbs`, {
       item_name: item[0].name,
       img: item[0].img,
       dice: item[0].damage,
@@ -109,7 +104,7 @@ export default class NecrobiozzActorSheet extends ActorSheet {
     let sortedResults = roll.terms[0].results.map(r => {return r.result}).sort(function(a, b) {
       return b - a;});
     
-      const tpl = await renderTemplate("systems/necrobiozz/templates/chat-attrs-roll.hbs", {
+      const tpl = await renderTemplate(`${game.system_path}/templates/chats/attrs-roll.hbs`, {
         terms: `${dices}d20`,
         row: sortedResults.join(', '),
         rmax: parseInt(sortedResults[0]),
@@ -132,7 +127,7 @@ export default class NecrobiozzActorSheet extends ActorSheet {
     evt.preventDefault();
     const attrType = $(evt.currentTarget).attr('attr-type'); 
 
-    const template = await renderTemplate("systems/necrobiozz/templates/dialog-attrs-roll.hbs");
+    const template = await renderTemplate(`${game.system_path}/templates/dialogs/attrs-roll.hbs`);
     return new Promise(resolve => {
       const data = {
         title: game.i18n.localize("nkrbz.Common.CheckAttrs"),
