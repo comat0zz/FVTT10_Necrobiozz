@@ -1,5 +1,7 @@
 export const Necrobiozz = {};
 
+Necrobiozz.system_path = "systems/necrobiozz";
+
 Necrobiozz.SelectYesNo = {
   "Yes": "nkrbz.Common.Select.Yes",
   "No": "nkrbz.Common.Select.No"
@@ -10,10 +12,6 @@ Necrobiozz.Distance = {
   "beside": "nkrbz.Item.Weapon.DistanceVal.Beside",
   "short": "nkrbz.Item.Weapon.DistanceVal.Short",
   "long": "nkrbz.Item.Weapon.DistanceVal.Long"
-}
-
-Necrobiozz.Enemies = {
-
 }
 
 Necrobiozz.Attrs = {

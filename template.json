@@ -2,7 +2,9 @@
   "Actor": {
     "types": [
       "hero",
-      "enemy"
+      "named_adversary",
+      "simple_adversary",
+      "allies"
     ],
     "templates": {
       "baseActor": {
@@ -114,9 +116,29 @@
         }
       }
     },
-    "enemy": {
+    "simple_adversary": {
       "templates": ["baseActor"],
-      "strength": 0
+      "strength": 0,
+      "threats": {
+        "green": "",
+        "red": "",
+        "black": ""
+      },
+      "damage": "1"
+    },
+    "named_adversary": {
+      "templates": ["baseActor"],
+      "strength": 0,
+      "damage": 0,
+      "capabilities": "",
+      "items": []
+    },
+    "allies": {
+      "templates": ["baseActor"],
+      "vitality": 0,
+      "damage": "1",
+      "amount": 1,
+      "capabilities": ""
     }
   },
   "Item": {
