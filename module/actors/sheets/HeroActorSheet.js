@@ -10,7 +10,7 @@ export class HeroActorSheet extends BaseActorSheet {
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["necrobiozz", "sheet", "actor"],
+      classes: [game.system.id, "sheet", "actor", "actor-hero"],
       width: 720,
       height: 800,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "weaponequip"}]
