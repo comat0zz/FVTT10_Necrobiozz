@@ -14,6 +14,10 @@
   height: 420px;
 }
 
+.item .editor {
+  height: 230px;
+}
+
 table {
   margin: 0;
   border: 0;

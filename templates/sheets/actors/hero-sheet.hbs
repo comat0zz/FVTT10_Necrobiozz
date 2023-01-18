@@ -238,7 +238,7 @@
   </div>
   {{!-- Для заметок Tab --}}
   <div class="tab" data-group="primary" data-tab="description">
-    {{editor content=systemData.description target="data.description" button=true owner=owner editable=editable}}
+    {{editor systemData.description target="system.description" button=true engine="tinymce" collaborate=false}}
   </div>
 </section>
 </form>
