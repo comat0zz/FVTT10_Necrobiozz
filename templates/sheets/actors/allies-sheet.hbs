@@ -1,3 +1,35 @@
 <form class="{{cssClass}}" autocomplete="off">
 
+<div class='actor-wrapper'>
+  <div class='actor-row'>
+    
+    <div class='actor-column'>
+      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+    </div>
+    <div class='actor-column actor-attr-block'>
+      <input name="name" type="text" class="enemy-name-field" value="{{actor.name}}" placeholder="{{localize 'nkrbz.Actor.NameEnemy'}}" />
+      <h3>{{localize 'nkrbz.Actor.Attrs.Label'}}</h3>
+      <table>
+          <tr>
+              <td>{{localize "nkrbz.Actor.Vitality"}}</td>
+              <td><input name="system.vitality" type="text" value="{{systemData.vitality}}" placeholder=""  data-dtype="Number" /></td>
+          </tr>
+          <tr>
+              <td class="cgrab ally-roll" roll-dmg="{{systemData.damage}}">{{localize "nkrbz.Item.Weapon.Dmg"}}</td>
+              <td><input name="system.damage" type="text" value="{{systemData.damage}}" placeholder="" /></td>
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class='actor-wrapper'>
+  <div class='actor-row'>
+    <div class='actor-column'>
+    <h3>{{localize "nkrbz.Common.Description"}}</h3>  
+    {{editor systemData.description target="system.description" button=true engine="tinymce" collaborate=false}}
+    </div>
+  </div>
+</div>
+
 </form>

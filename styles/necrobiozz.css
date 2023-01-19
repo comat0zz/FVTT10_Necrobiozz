@@ -168,3 +168,18 @@ input[name="data.ammunition"] {
 .enemy-name-field {
   margin-bottom: 4px;
 }
+
+.color-green {
+  color:darkgreen;
+}
+.color-red {
+  color:red;
+}
+
+.color-black{
+  color: black;
+}
+
+.width-td {
+  width: 20px
+}

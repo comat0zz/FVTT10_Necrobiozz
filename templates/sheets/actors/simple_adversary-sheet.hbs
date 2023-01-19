@@ -1,3 +1,67 @@
 <form class="{{cssClass}}" autocomplete="off">
 
+<div class='actor-wrapper'>
+  <div class='actor-row'>
+    
+    <div class='actor-column'>
+      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+    </div>
+    <div class='actor-column actor-attr-block'>
+      <input name="name" type="text" class="enemy-name-field" value="{{actor.name}}" placeholder="{{localize 'nkrbz.Actor.NameEnemy'}}" />
+      <h3>{{localize 'nkrbz.Actor.Attrs.Label'}}</h3>
+      <table>
+          <tr>
+              <td>{{localize "nkrbz.Actor.StrengthEnemy"}}</td>
+              <td><input name="system.strength" type="text" value="{{systemData.strength}}" placeholder=""  data-dtype="Number" /></td>
+          </tr>
+      </table>
+      <h3>{{localize "nkrbz.Item.WeaponsRoll"}}</h3>
+      <table class="actor-item-equip">
+      {{#each systemData.items as |item key|}}
+            <tr item-id="{{item.id}}" item-type="{{item.type}}">
+              <td><img src="{{item.img}}" alt="{{item.name}}"></td>
+              <td class="actor-roll-weapon">{{item.name}}</td>
+              <td><i class="fa-solid fa-trash equip-item-del"></i></td>
+            </tr>
+      {{else}}
+            <tr>
+              <td>{{localize "nkrbz.Actor.noEquips"}}</td>
+            </tr>
+      {{/each}}
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<h3>{{localize "nkrbz.Common.Traits"}}</h3>
+<div class='actor-wrapper enemy-name-field'>
+  <div class='actor-row'>
+    <div class='actor-column'>
+    <table>
+      <tr>
+        <td class="width-td"><i class="fa-solid fa-circle color-green"></i></td>
+        <td><input name="system.threats.green" type="text" value="{{systemData.threats.green}}" placeholder="" /></td>
+      </tr>
+      <tr>
+        <td class="width-td"><i class="fa-solid fa-triangle color-red"></i></td>
+        <td><input name="system.threats.red" type="text" value="{{systemData.threats.red}}" placeholder="" /></td>
+      </tr>
+      <tr>
+        <td class="width-td"><i class="fa-solid fa-plus color-black"></i></td>
+        <td><input name="system.threats.black" type="text" value="{{systemData.threats.black}}" placeholder="" /></td>
+      </tr>
+    </table>
+    </div>
+  </div>
+</div>
+<div class='actor-wrapper'>
+  <div class='actor-row'>
+    <div class='actor-column'>
+    <h3>{{localize "nkrbz.Common.Description"}}</h3>  
+    {{editor systemData.description target="system.description" button=true engine="tinymce" collaborate=false}}
+    </div>
+  </div>
+</div>
+
 </form>

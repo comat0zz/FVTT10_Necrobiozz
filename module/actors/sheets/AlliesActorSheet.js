@@ -1,5 +1,4 @@
 import { BaseActorSheet } from "../BaseActorSheet.js";
-import { genId } from "../../utils.js";
 
 /**
  * Extend the base Actor document to support attributes and groups with a custom template creation dialog.
@@ -30,14 +29,20 @@ export class AlliesActorSheet extends BaseActorSheet {
 
   activateListeners(html) {
     super.activateListeners(html);
-
+    html.find('.ally-roll').click(evt => this._onActorRollDmg(evt));
   }
 
-  /** @override */
-  _onDrop(evt) { 
+  async _onActorRollDmg(evt) {
     evt.preventDefault();
-    const dragData = JSON.parse(evt.dataTransfer.getData("text/plain"));
+    const dmg = $(evt.currentTarget).attr('roll-dmg');
+    let roll = await new Roll(dmg).roll({async: true});
 
+    ChatMessage.create({
+      user: game.user._id,
+      speaker: ChatMessage.getSpeaker(),
+      content: game.i18n.localize("nkrbz.Actor.AllyAttack") + " ("+ dmg +"): " + roll.result
+    });
   }
-  
+
+
 }

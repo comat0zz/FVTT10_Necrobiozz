@@ -124,7 +124,7 @@
         "red": "",
         "black": ""
       },
-      "damage": "1"
+      "items": []
     },
     "named_adversary": {
       "templates": ["baseActor"],
@@ -153,9 +153,7 @@
     "allies": {
       "templates": ["baseActor"],
       "vitality": 0,
-      "damage": "1",
-      "amount": 1,
-      "capabilities": ""
+      "damage": "1"
     }
   },
   "Item": {
