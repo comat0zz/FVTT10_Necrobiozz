@@ -2,23 +2,18 @@
   "id": "necrobiozz",
   "title": "TTRPG Necrobiozz",
   "description": "Игра про мертвецов от студии Ex_Nihilum",
-  "version": "1.5",
+  "version": "1.6",
   "compatibility": {
-    "minimum": 10,
-    "verified": 10.291
+    "minimum": "10",
+    "verified": "10.291"
   },
   "authors": [
     {
       "name": "Nikita Belov",
-      "email": "comAT0Zz@gmail.com"
+      "email": "comAT0Zz@gmail.com",
+      "flags": {}
     }
   ],
-  "relationships": {
-    "systems": [
-    ],
-    "requires": [
-    ]
-  },
   "esmodules": [
     "module/necrobiozz.js"
   ],
@@ -31,26 +26,37 @@
       "label": "Предметы",
       "system": "necrobiozz",
       "path": "packs/items.db",
-      "type": "Item"
-    },{
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
       "name": "injuries",
       "label": "Травмы",
       "system": "necrobiozz",
       "path": "packs/injuries.db",
-      "type": "Item"
+      "type": "Item",
+      "private": false,
+      "flags": {}
     }
   ],
   "languages": [
     {
       "lang": "ru",
       "name": "Russian",
-      "path": "lang/ru.json"
+      "path": "lang/ru.json",
+      "flags": {}
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
     }
   ],
   "socket": true,
   "gridDistance": 1,
   "gridUnits": "m",
-
   "url": "https://github.com/comat0zz/FVTT10_Necrobiozz",
   "manifest": "https://github.com/comat0zz/FVTT10_Necrobiozz/releases/latest/download/system.json",
   "download": "https://github.com/comat0zz/FVTT10_Necrobiozz/releases/latest/download/necrobiozz.zip"
