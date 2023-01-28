@@ -1,1 +1,185 @@
-ru.json
+{
+	"ACTOR": {
+		"TypeHero": "PC Zombie",
+		"TypeSimple_adversary": "Meat",
+		"TypeNamed_adversary": "Dangerozz meat",
+		"TypeAllies": "Zombiez"
+	},
+	"ITEM": {
+		"TypeWeapon": "Weaponz",
+		"TypeArmor": "Armorz",
+		"TypeEquipment": "Equipz",
+		"TypeInjuries": "Traumaz"
+	},
+
+	"nkrbz": {
+		"Common": {
+			"Description": "Detailz",
+			"Select": {
+				"Yes": "Yeehaw!",
+				"No": "Nope"
+			},
+			"Traits": "Threat levelz",
+			"Title": "Project NKRBZ",
+			"SubTitle": "Well-rotten pre-alpha",
+			"QuickAction": "Quick actionz",
+			"ForNotes": "NOtez",
+			"Weaponequip": "Weapona and equipz",
+			"Buttons": {
+				"Cancel": "Canzel"
+
+			},
+			"CheckAttrs": "Attribute check",
+			"CountsD20": "How much d20",
+			"withHindrance": "Downer",
+			"withAdvantage": "Nitro",
+			"withNormal": "Az yUzhal",
+
+			"withHindranceChat": "Downed check",
+			"withAdvantageChat": "Nitro check",
+			"withNormalChat": "Check az yUzhal",
+
+			"checkSuccess": "Check pazz!",
+			"checkFailure": "Check zpoil!",
+
+			"attrChat": "Attribute",
+			"rollChat": "Roll"
+		},
+
+
+		"Actor": {
+			"AllyAttack": "Alyy attakz",
+			"NameEnemy": "Enemy name",
+			"StrengthEnemy": "Enemy ztrenght",
+			"Vitality": "Gritz",
+			"Attrs": {
+				"Label": "Attributez",
+				"Agr": "Aggro",
+				"Agi": "Nimble",
+				"Int": "Zmartz",
+				"srv": "Gritz",
+				"brains": "Brainz"
+			},
+
+			"HandDmg": "Unarmed DMG",
+			"Injuries": "Traumaz",
+			"itWeapons": "Weaponz",
+			"itArmor": "Armorz",
+			"itEquips": "Eqipz",
+			"itOthers": "Otherz",
+
+			"injuryTo": "Enemy waz nipped",
+
+			"Equips": "Equipz",
+			"noEquips": "No equipz",
+			"noArmor": "No armorz",
+			"noInjury": "No traumaz",
+
+			"toDamage": "Gotten damagez",
+			"isThreshold": "Armorz threshold",
+
+			"Ammo": "Slug clipz",
+			"HordesLabel": "Da Horde",
+			"HordesHP": "Gutz",
+			"HordesDmg": "Damagez",
+			"HordesSize": "Sizez",
+			"HordeTitle": "Mindless husks. Got full Gutz while eating brainz",
+			"Supervisor": "Da lab bozz",
+			"Code": "Sample ID",
+			"Name": "Lab assistant",
+			"SkillsLabel": "Skillz",
+			"SkillAgress": "Aggro",
+			"SkillCommon": "Commonz",
+			"SkillInt": "Minded",
+			"SkillAgi": "Nimbled",
+			"Skills": {
+				"Common": {
+					"fastheal": "Fast growth",
+					"masspl": "Biomass",
+					"regen": "Regenerator",
+					"fastinf": "Contagious",
+					"necrospore": "Nekrosporezz",
+					"puthand": "Helpfuk hand(z)",
+					"flair": "Insight",
+					"infyey": "Cold eyez",
+					"selfsom": "Thrifty",
+					"deadface": "Almost human",
+					"nohangry": "Not so hungry"
+				},
+				"Agresses": {
+					"str": "Steanghtz",
+					"gromila": "Bulky Hulk",
+					"arm": "Happy bonezz",
+					"kogti": "Clawz",
+					"blades": "Bladez",
+					"argghh": "URRRGH!!!",
+					"electric": "Electroclash",
+					"emizom": "Disabler"
+				},
+				"Agilities": {
+					"hvat": "Cathy thing",
+					"oplet": "Wicker-tricker",
+					"acidplui": "Acid bitez",
+					"acidblood": "Acid bloodz",
+					"acidslun": "Acid spewz",
+					"fastzomb": "Veryfast",
+					"prigun": "Jumpie",
+					"stenolaz": "Climber",
+					"gracia": "Deadly dancer",
+					"eska": "Escaper"
+				},
+				"Intelegent": {
+					"openself": "Doorz friend",
+					"upyp": "Unlock and load",
+					"engeneer": "Rotten engie",
+					"iunder": "Underztandablez",
+					"write": "Dead reader",
+					"ispeek": "Ay say!",
+					"listen": "Commander",
+					"leader": "Dreadful leader",
+					"kuklo": "Da puppetteer",
+					"vudlo": "Uber commander",
+					"iron": "Iron will",
+					"horde": "Horde-monger",
+					"itsbrains": "Necrocannibal",
+					"nasled": "Inheritor",
+					"brain": "Mind eater",
+					"beiblya": "Blunt em all!",
+					"piu": "Point and trigger",
+					"oekr": "Reloader",
+					"necrosaper": "Nekrosapper"
+				}
+			}
+		},
+
+		"Item": {
+			"InputName": "Type the title",
+			"Properties": "Propz",
+			"WeaponsRoll": "Armz for rollz",
+			"Weapon": {
+				"isTraumatic": "Traumatic",
+				"valTraumatic": "DMG amount",
+				"isSingleShot": "Single shot",
+				"isSilent": "Silent",
+
+				"AmmoEmpty": "Out of ammo",
+
+				"isRecharge": "Need to reload",
+				"Distance": "Distanze",
+				"DistanceVal": {
+					"All": "Any",
+					"Beside": "Beside",
+					"Short": "Nearby",
+					"Long": "Far away"
+				},
+				"Damage": "DMG (1d8 for example)",
+				"Dmg": "DMG"
+			},
+
+			"Armor": {
+				"Survivability": "Iz it good for Gutz?",
+				"SurvVal": "also how much"
+			}
+		}
+	}
+}
